@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="test.html">Test</a></li>
+            <li><a href="home.html">Home</a></li>
+        </div>
+    </ul>
+</nav>
+<h2 id="main">Test</h2>
+<header>
+    <label>Student name </label>
+    <input type="text">
+</header>
+
+<div class="main-container">
+    <label class = "labels" for=""><b>1.question 1</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="o1" >
+        <label for="o1"> option 1 answer </label><br>
+        <input type="radio" id="o2" >
+        <label for="o2">option 2 answer</label><br>
+        <input type="radio" id="o3" >
+        <label for="o3">option 3 answer</label>
+    </div>
+    <hr>
+    <label lass = "labels" for=""><b>2.question 2</b></label>
+    <br>
+    <div class="question" >
+        <input type="radio" id="o4" >
+        <label for="o4"> option 1 answer </label><br>
+        <input type="radio" id="o5" >
+        <label for="o5">option 2 answer</label><br>
+        <input type="radio" id="o6" >
+        <label for="o6">option 3 answer</label>
+    </div>
+
+    <hr>
+    <label  for=""><b>3.question 3</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="o7" >
+        <label for="o7"> option 1 answer </label><br>
+        <input type="radio" id="o8" >
+        <label for="o8">option 2 answer</label><br>
+        <input type="radio" id="o9" >
+        <label for="o9">option 3 answer</label>
+    </div>
+    <button type="submit" value="submit">
+        Submit
+    </button>
+
+</div>
 
 </body>
 </html>
