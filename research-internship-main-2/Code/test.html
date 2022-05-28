@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="test.html">Test</a></li>
+            <li><a href="home.html">Home</a></li>
+        <div id = "score">  
+            <li><p> Score: / 4  </p></li>
+        </div>  
+            
+        </div>
+    </ul>
+</nav>
+<h2 id="main">Test</h2>
+
+
+<header>
+    <label>Student name </label>
+    <input type="text" id="studentName">
+</header>
+
+    <div class="main-container">
+    <br>
+    <label class = "labels" for=""><b>1. Which sign would complete the statement -3 [] 2 indicating that 2 is greater than -3?</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="greater" name="first" 
+        value="greater" checked>
+        <label for="greater"> > </label><br>
+        <input type="radio" id="less" name="first" value="less">
+        <label for="less"> < </label> <br>
+        <input type="radio" id="equal" name="first" value="equal">
+        <label for="equal"> = </label>
+    </div>
+
+    
+    <hr>
+    <br>
+    <label lass = "labels" for=""><b> 2. Is (3+4)+5 the same as 3+(4+5)? </b></label>
+    <br>
+    <div id = second class="question" >
+        <input type="radio" id="true2" name="second" 
+        value="true2" checked>
+        <label for="true2"> true </label><br>
+        <input type="radio" id="false2" name="second" value="false2">
+        <label for="false2"> false </label><br>
+        
+    </div>
+
+    <hr>
+    <br>
+    <label  for=""><b>3. (true or false) The number 3.333... is greater than 3.333.?</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="true3" name="third" 
+        value="true3" checked>
+        <label for="true3"> true </label><br>
+        <input type="radio" id="false3" name="third" value="false3">
+        <label for="false3"> false </label><br>
+    </div>
+
+
+    <hr>
+    <br>
+    <label lass = "labels" for=""><b> 4. Find f.g if f(x)=6x-1 and g(x)=7x+7. </b></label>
+    <br>
+    <div class="question" >
+        <input type="radio" id="answer41" name="fourth" value="answer41">
+        <label for="answer41"> 13x^2 +35x+6 </label><br>
+        <input type="radio" id="answer42" name="fourth" value="answer42"
+               checked>
+        <label for="answer42"> 42x^2 +x−7 </label><br>
+        <input type="radio" id="answer43" name="fourth" value="answer43">
+        <label for="answer43"> 42x^2 +35x−7 </label><br>
+        <input type="radio" id="answer44" name="fourth" value="answer44">
+        <label for="answer44"> 42x^2 −7 </label><br>
+        
+    </div>
+
+    <button type="submit" value="submit" onclick="myFunction()">
+        Submit
+    </button>
+
+</div>
+
+</body>
+</html>

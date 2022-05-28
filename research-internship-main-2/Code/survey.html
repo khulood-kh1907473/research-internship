@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content=
+          "width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<nav class="navbar">
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <div class="menu">
+      <li><a href="survey.html">Survey</a></li>
+      <li><a href="test.html">Test</a></li>
+      <li><a href="home.html">Home</a></li>
+    </div>
+  </ul>
+</nav>
+
+<h1>Rational Function Survey</h1>
+
+<!-- Create Form -->
+<form id="form">
+
+  <!-- Details -->
+  <div class="form-control">
+    <label for="name" id="label-name">
+      Name
+    </label>
+
+    <!-- Input Type Text -->
+    <input type="text"
+           id="name"
+           placeholder="Enter your name" />
+  </div>
+
+  <div class="form-control">
+    <label for="email" id="label-email">
+      Email
+    </label>
+
+    <!-- Input Type Email-->
+    <input type="email"
+           id="email"
+           placeholder="Enter your email" />
+  </div>
+
+
+
+  <div class="form-control">
+    <label for="rfOne" id="rfOne">
+      How do you measure your understanding of rational function definition?
+    </label>
+
+    <!-- Dropdown options -->
+    <select name="rfOne" id="rfOne">
+      <option value="one">Very satisfied</option>
+      <option value="two">Satisfied</option>
+      <option value="three" >
+        Neither satisfied nor dissatisfied
+      </option>
+      <option value="four">Dissatisfied</option>
+      <option value="five">Very dissatisfied</option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label for="rfTwo" id="rfTwo">
+      How do you measure your understanding of rational function domain and range?
+    </label>
+
+    <!-- Dropdown options -->
+    <select name="rfTwo" id="rfTwo">
+      <option value="one">Very satisfied</option>
+      <option value="two">Satisfied</option>
+      <option value="three" >
+        Neither satisfied nor dissatisfied
+      </option>
+      <option value="four">Dissatisfied</option>
+      <option value="five">Very dissatisfied</option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label for="rfThree" id="rfThree">
+      How do you measure your understanding of asymptotes of rational function ?
+    </label>
+
+    <!-- Dropdown options -->
+    <select name="rfThree" id="rfThree">
+      <option value="one">Very satisfied</option>
+      <option value="two">Satisfied</option>
+      <option value="three" >
+        Neither satisfied nor dissatisfied
+      </option>
+      <option value="four">Dissatisfied</option>
+      <option value="five">Very dissatisfied</option>
+    </select>
+  </div>
+
+
+  <div class="form-control">
+    <label for="rfFour" id="rfFour">
+      What is the correct defintion of holes of a rational function?
+    </label>
+
+    <!-- Dropdown options -->
+    <label for="inp-1">
+      <input type="radio"
+             name="inp"> points that seem that they are present on the
+              graph of the rational function but they are actually not present.</input></label>
+    <label for="inp-2">
+      <input type="radio"
+             name="inp">  ratio of polynomials where the
+            polynomial in the denominator shouldn't be equal to zero.</input></label>
+    <label for="inp-3">
+      <input type="radio"
+             name="inp">  expressions with one or more terms with a non-zero coefficient.</input></label>
+  </div>
+
+
+  <div class="form-control">
+    <label for="rfFive" id="rfFive">
+      What is the correct defintion of holes of a rational function?
+    </label>
+
+    <!-- Dropdown options -->
+    <label for="inp-1">
+      <input type="radio"
+             name="inp1">  horizontal</input></label>
+    <label for="inp-2">
+      <input type="radio"
+             name="inp1">  vertical </input></label>
+    <label for="inp-3">
+      <input type="radio"
+             name="inp1">  slant </input></label>
+  </div>
+
+  <div class="form-control">
+    <label for="rfFive" id="rfFive">
+      Is it true that rational function can have more than one vertical asymptote?
+
+    </label>
+
+    <!-- Dropdown options -->
+    <label for="inp-1">
+      <input type="radio"
+             name="inp2">  True</input></label>
+    <label for="inp-2">
+      <input type="radio"
+             name="inp2">  False </input></label>
+
+  </div>
+
+
+
+  <div class="form-control">
+    <label for="comment">
+      In short, explain what are the steps for drawing a graph for a rational function?
+    </label>
+
+    <!-- multi-line text input control -->
+    <textarea name="answer" id="answer"
+              placeholder=" your answer">
+			</textarea>
+  </div>
+
+
+
+  <div class="form-control">
+    <label for="comment">
+      Explain what are the steps for finding inverse for rational function?
+    </label>
+
+    <!-- multi-line text input control -->
+    <textarea name="answer" id="answer"
+              placeholder=" your answer">
+			</textarea>
+  </div>
+
+
+
+  <!-- Multi-line Text Input Control -->
+  <button type="submit" value="submit">
+    Submit
+  </button>
+</form>
+</body>
+
+</html>
