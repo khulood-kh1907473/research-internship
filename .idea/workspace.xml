@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/survey.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/survey.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/test.html" afterDir="false" />
     </list>
@@ -71,7 +64,7 @@
       <workItem from="1653554057663" duration="636000" />
       <workItem from="1653554698960" duration="8000" />
       <workItem from="1653734068045" duration="4370000" />
-      <workItem from="1653897942348" duration="29878000" />
+      <workItem from="1653897942348" duration="30851000" />
     </task>
     <servers />
   </component>

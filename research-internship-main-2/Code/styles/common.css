@@ -89,6 +89,7 @@ nav span{
 }
 
 button{
+    font-family: 'PT Mono', monospace;
     margin-top: 15px;
     margin-left: 15px;
     cursor: pointer;
