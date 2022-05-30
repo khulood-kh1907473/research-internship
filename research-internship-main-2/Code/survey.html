@@ -6,48 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content=
           "width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/survey.css">
+  <script src="scripts/common.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=PT+Mono&family=Prata&family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <nav class="navbar">
-  <ul class="nav-links">
-    <input type="checkbox" id="checkbox_toggle" />
-    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-    <div class="menu">
-      <li><a href="survey.html">Survey</a></li>
-      <li><a href="test.html">Test</a></li>
-      <li><a href="home.html">Home</a></li>
-    </div>
+  <a href="home.html" class="title">Rational Functions</a>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li class="selected"><a href="survey.html">Survey</a></li>
+    <li><a href="test.html">Test</a></li>
+    <span class="exit">&#10006</span>
   </ul>
+  <span class="hamburger">&#9776</span>
 </nav>
 
-<h1>Rational Function Survey</h1>
+<main>
 
+  <h1>Rational Function Survey</h1>
 <!-- Create Form -->
 <form id="form">
 
   <!-- Details -->
   <div class="form-control">
     <label for="name" id="label-name">
-      Name
+      Name:
     </label>
 
     <!-- Input Type Text -->
     <input type="text"
-           id="name"
-           placeholder="Enter your name" />
+           id="name"/>
   </div>
 
   <div class="form-control">
     <label for="email" id="label-email">
-      Email
+      Email:
     </label>
 
     <!-- Input Type Email-->
     <input type="email"
-           id="email"
-           placeholder="Enter your email" />
+           id="email"/>
   </div>
 
 
@@ -58,15 +61,15 @@
     </label>
 
     <!-- Dropdown options -->
+    <div class="select">
     <select name="rfOne" id="rfOne">
       <option value="one">Very satisfied</option>
       <option value="two">Satisfied</option>
-      <option value="three" >
-        Neither satisfied nor dissatisfied
-      </option>
+      <option value="three" >Neutral</option>
       <option value="four">Dissatisfied</option>
       <option value="five">Very dissatisfied</option>
     </select>
+    </div>
   </div>
 
   <div class="form-control">
@@ -75,15 +78,15 @@
     </label>
 
     <!-- Dropdown options -->
+    <div class="select">
     <select name="rfTwo" id="rfTwo">
       <option value="one">Very satisfied</option>
       <option value="two">Satisfied</option>
-      <option value="three" >
-        Neither satisfied nor dissatisfied
-      </option>
+      <option value="three" >Neutral</option>
       <option value="four">Dissatisfied</option>
       <option value="five">Very dissatisfied</option>
     </select>
+    </div>
   </div>
 
   <div class="form-control">
@@ -92,15 +95,15 @@
     </label>
 
     <!-- Dropdown options -->
+    <div class="select">
     <select name="rfThree" id="rfThree">
       <option value="one">Very satisfied</option>
       <option value="two">Satisfied</option>
-      <option value="three" >
-        Neither satisfied nor dissatisfied
-      </option>
+      <option value="three" >Neutral</option>
       <option value="four">Dissatisfied</option>
       <option value="five">Very dissatisfied</option>
     </select>
+    </div>
   </div>
 
 
@@ -110,19 +113,18 @@
     </label>
 
     <!-- Dropdown options -->
-    <label for="inp-1">
+    <br> <label for="inp-1">
       <input type="radio"
              name="inp"> points that seem that they are present on the
               graph of the rational function but they are actually not present.</input></label>
-    <label for="inp-2">
+    <br><label for="inp-2">
       <input type="radio"
              name="inp">  ratio of polynomials where the
             polynomial in the denominator shouldn't be equal to zero.</input></label>
-    <label for="inp-3">
+    <br><label for="inp-3">
       <input type="radio"
              name="inp">  expressions with one or more terms with a non-zero coefficient.</input></label>
   </div>
-
 
   <div class="form-control">
     <label for="rfFive" id="rfFive">
@@ -130,13 +132,13 @@
     </label>
 
     <!-- Dropdown options -->
-    <label for="inp-1">
+    <br><label for="inp-1">
       <input type="radio"
              name="inp1">  horizontal</input></label>
-    <label for="inp-2">
+    <br><label for="inp-2">
       <input type="radio"
              name="inp1">  vertical </input></label>
-    <label for="inp-3">
+    <br><label for="inp-3">
       <input type="radio"
              name="inp1">  slant </input></label>
   </div>
@@ -148,10 +150,10 @@
     </label>
 
     <!-- Dropdown options -->
-    <label for="inp-1">
+    <br> <label for="inp-1">
       <input type="radio"
              name="inp2">  True</input></label>
-    <label for="inp-2">
+    <br><label for="inp-2">
       <input type="radio"
              name="inp2">  False </input></label>
 
@@ -166,8 +168,7 @@
 
     <!-- multi-line text input control -->
     <textarea name="answer" id="answer"
-              placeholder=" your answer">
-			</textarea>
+              placeholder="Type here..."></textarea>
   </div>
 
 
@@ -179,17 +180,27 @@
 
     <!-- multi-line text input control -->
     <textarea name="answer" id="answer"
-              placeholder=" your answer">
-			</textarea>
+              placeholder="Type here..."></textarea>
   </div>
 
 
 
   <!-- Multi-line Text Input Control -->
+  <div class="buttons">
   <button type="submit" value="submit">
     Submit
   </button>
+  <button type="reset" value="reset">
+    Reset
+  </button>
+  </div>
 </form>
+</main>
+
+<footer>
+
+</footer>
+
 </body>
 
 </html>

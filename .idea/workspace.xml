@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/media/graph.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/survey.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/styles/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/survey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -34,19 +41,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/research-internship-main-2/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/research-internship-main-3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-3" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2" />
+      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\Code" />
+      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\Code\scripts" />
+      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\styles" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\media" />
-      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\Code\scripts" />
-      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\Code\styles" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,7 +70,8 @@
       <workItem from="1653498793015" duration="1325000" />
       <workItem from="1653554057663" duration="636000" />
       <workItem from="1653554698960" duration="8000" />
-      <workItem from="1653734068045" duration="3937000" />
+      <workItem from="1653734068045" duration="4370000" />
+      <workItem from="1653897942348" duration="29878000" />
     </task>
     <servers />
   </component>
