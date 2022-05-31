@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/test.js"></script>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=PT+Mono&family=Prata&family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="home.html" class="title">Rational Functions</a>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="survey.html">Survey</a></li>
+        <li class="selected"><a href="test.html">Test</a></li>
+        <span class="exit">&#10006</span>
+    </ul>
+    <span class="hamburger">&#9776</span>
+</nav>
+<div id = "score">
+    Score: / 4
+</div>
+<main>
+<h1>Test</h1>
+
+<header>
+    <label>Name: </label>
+    <input type="text" id="studentName">
+</header>
+    <form>
+    <div class="main-container">
+    <br>
+    <label class = "labels" for=""><b>1. Which sign would complete the statement -3 [] 2 indicating that 2 is greater than -3?</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="greater" name="first" 
+        value="greater">
+        <label for="greater"> > </label><br>
+        <input type="radio" id="less" name="first" value="less">
+        <label for="less"> < </label> <br>
+        <input type="radio" id="equal" name="first" value="equal">
+        <label for="equal"> = </label>
+    </div>
+
+    
+    <hr>
+    <br>
+    <label class = "labels" for=""><b> 2. Is (3+4)+5 the same as 3+(4+5)? </b></label>
+    <br>
+    <div id = second class="question" >
+        <input type="radio" id="true2" name="second" 
+        value="true2">
+        <label for="true2"> true </label><br>
+        <input type="radio" id="false2" name="second" value="false2">
+        <label for="false2"> false </label><br>
+        
+    </div>
+
+    <hr>
+    <br>
+    <label  for=""><b>3. (true or false) The number 3.333... is greater than 3.333.?</b></label>
+    <br>
+    <div class="question">
+        <input type="radio" id="true3" name="third" 
+        value="true3">
+        <label for="true3"> true </label><br>
+        <input type="radio" id="false3" name="third" value="false3">
+        <label for="false3"> false </label><br>
+    </div>
+
+
+    <hr>
+    <br>
+    <label class = "labels" for=""><b> 4. Find f.g if f(x)=6x-1 and g(x)=7x+7. </b></label>
+    <br>
+    <div class="question" >
+        <input type="radio" id="answer41" name="fourth" value="answer41">
+        <label for="answer41"> 13x<sup>2</sup> + 35x + 6 </label><br>
+        <input type="radio" id="answer42" name="fourth" value="answer42">
+        <label for="answer42"> 42x<sup>2</sup> + x − 7 </label><br>
+        <input type="radio" id="answer43" name="fourth" value="answer43">
+        <label for="answer43"> 42x<sup>2</sup> + 35x − 7 </label><br>
+        <input type="radio" id="answer44" name="fourth" value="answer44">
+        <label for="answer44"> 42x<sup>2</sup> − 7 </label><br>
+    </div>
+
+        <div class="buttons">
+            <button type="button" value="submit" onclick="myFunction()">
+                Submit
+            </button>
+            <button type="reset" value="reset">
+                Reset
+            </button>
+        </div>
+    </form>
+
+</div>
+</main>
+</body>
+</html>
