@@ -62,3 +62,20 @@ footer > div > a:hover{
 @media (max-width: 700px) {
 
 }
+
+
+#myProgress {
+    width: 0%;
+    /* width: var(--interval); */
+    background-color: white;
+}
+
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #7189FF;
+}
+
+#ratio {
+    color: aqua;
+}
