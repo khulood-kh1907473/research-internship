@@ -149,6 +149,7 @@ input[type=text], input[type=email] {
         position: absolute;
         right: -1000px;
         top: 0;
+        color: var(--color-light-purple);
     }
 
     nav span{
@@ -157,6 +158,7 @@ input[type=text], input[type=email] {
         position: absolute;
         right: 20px;
         top: 0;
+        color: var(--color-light-purple);
     }
 
     .inactive{
