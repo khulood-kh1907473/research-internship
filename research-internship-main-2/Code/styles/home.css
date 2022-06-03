@@ -17,6 +17,7 @@ footer{
     height: 20vh;
 }
 
+
 .bottom-page-scrolls{
     display: flex;
     flex-direction: row-reverse;
