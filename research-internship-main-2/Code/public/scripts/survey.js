@@ -1,3 +1,5 @@
+import {updateStudent} from "../repositories/StudentRepository.js"
+
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
@@ -8,7 +10,7 @@ async function start(){
     });
 }
 
- function getFormValues(){
+ async function getFormValues(){
      const values = {};
      values.question1 = document.querySelector('input[name="question-1"]:checked').value;
      values.question2 = document.querySelector('input[name="question-2"]:checked').value;
@@ -20,5 +22,10 @@ async function start(){
      values.question8 = document.querySelector('input[name="question-8"]:checked').value;
      values.question9 = document.querySelector('input[name="question-9"]:checked').value;
      values.question10 = document.querySelector('input[name="question-10"]:checked').value;
+     const email = sessionStorage.getItem("email");
+     await updateStudent(email, values);
+     console.log(values);
+     console.log(email);
+     //getStudent()
      return values;
  }
