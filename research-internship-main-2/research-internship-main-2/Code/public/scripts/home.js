@@ -148,13 +148,25 @@ function nextFunction(){
 
 function content(actual, previous){
 
-    for(let i = 1; i<17; i++){
-        if ( i < position){
+    // for(let i = 1; i<17; i++){
+    //     if ( i < position){
+    //         circles[i].classList.add("active");
+    //     }else{
+    //        // circles[i].classList.remove("active");
+    //     }
+    // }
+
+    if(actual > previous) {
+        for (let i = previous; i < actual; i++) {
             circles[i].classList.add("active");
-        }else{
-           // circles[i].classList.remove("active");
         }
     }
+    else
+        for (let i = previous; i >= actual; i--){
+            circles[i].classList.remove("active");
+            circles[i].classList.add("inactive");
+        }
+
     const actualContent = document.getElementById(actual);
     actualContent.style.visibility = "visible";
     actualContent.style.opacity = "1";

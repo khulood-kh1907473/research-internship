@@ -175,13 +175,17 @@ footer > div > a:hover{
     align-items: center;
     justify-content: center;
     transition: 0.4s ease;
-    cursor: not-allowed;
+    cursor: pointer;
 
 }
 
 .circle.active{
     border-color: var(--color-dark-purple);
     cursor: pointer;
+}
+
+.circle.inactive{
+    color: var(--line-border-empty);
 }
 
 
