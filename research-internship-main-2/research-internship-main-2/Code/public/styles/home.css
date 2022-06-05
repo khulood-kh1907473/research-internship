@@ -7,9 +7,16 @@ body{
     height: 100vh;
 }
 .content{
-    padding: 3vw 25vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+    height: 0;
     font-size: 20px;
 }
+
 
 h3{
     font-size: 45px;
@@ -48,7 +55,7 @@ th, td{
 
 footer > div > a{
     background-color: var(--color-light-purple);
-    color: white;
+    color: var(--color-white);
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -79,7 +86,7 @@ footer > div > a:hover{
 .show-answer-button{
     margin-top: 15px;
     background-color: var(--color-light-purple);
-    color: white;
+    color: var(--color-white);
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -130,7 +137,7 @@ footer > div > a:hover{
 
 .progree-container::before{
     content: "";
-    background-color: black;
+    background-color: var(--color-dark-purple);
     position: absolute;
     top: 50%;
     left: 0;
@@ -142,7 +149,7 @@ footer > div > a:hover{
 }
 
 .progress{
-    background-color: var(--line-border-fill);
+    background-color: var(--color-lighter-purple);
     position: absolute;
     top: 50%;
     left: 0;
@@ -154,11 +161,11 @@ footer > div > a:hover{
 }
 
 .item{
-    color: black;
+    color: var(--color-dark-purple);
 }
 
 .circle{
-    background-color: white;
+    background-color: var(--color-white);
     color: var(--line-border-empty);
     border-radius: 50%;
     height: 50px;
@@ -173,7 +180,7 @@ footer > div > a:hover{
 }
 
 .circle.active{
-    border-color: var(--line-border-fill);
+    border-color: var(--color-dark-purple);
     cursor: pointer;
 }
 
