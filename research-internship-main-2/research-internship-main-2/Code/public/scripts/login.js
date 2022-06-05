@@ -4,6 +4,7 @@ import {readUser} from "../repositories/UserRepository.js";
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
+    document.querySelector("body").classList.remove("fadeout");
     let role;
     const selectForm = document.querySelector("#occupation");
     selectForm.addEventListener("change", () => {
@@ -40,8 +41,12 @@ async function studentForm(){
     values.grade = document.querySelector("#grade").value;
     const response = await createStudent(values);
     sessionStorage.setItem("email", values.email);
-    if(response === null)
-        location.href="../home.html";
+    if(response === null) {
+        document.querySelector("body").classList.add("fadeout");
+        window.setTimeout(() => {
+            window.location.href = "../home.html";
+        },3000);
+    }
 }
 
 async function teacherForm(){
@@ -53,7 +58,10 @@ async function teacherForm(){
     const user = await readUser(values.username, values.password);
     console.log(user);
     if (user.exists) {
-        location.href="../statistics.html";
+        document.querySelector("body").classList.add("fadeout");
+        window.setTimeout(() => {
+            window.location.href = "../survey-statistics.html.html";
+        },3000);
     } else {
         alert("Incorrect email or password!");
     }

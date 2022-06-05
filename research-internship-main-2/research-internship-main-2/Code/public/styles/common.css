@@ -29,6 +29,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition:opacity 3s;
+    opacity:1;
+}
+
+body.fadeout{
+    opacity: 0;
 }
 
 nav{

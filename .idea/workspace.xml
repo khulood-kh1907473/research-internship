@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/data/students.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/test-statistics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/test-statistics.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/test-statistics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/survey-statistics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/survey.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/survey-statistics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/repository/student-repo.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/repository/student-repo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/statistics.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/survey-statistics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/survey.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -80,7 +89,7 @@
       <workItem from="1654174182167" duration="9183000" />
       <workItem from="1654301531237" duration="2717000" />
       <workItem from="1654412153741" duration="2764000" />
-      <workItem from="1654455451226" duration="11785000" />
+      <workItem from="1654455451226" duration="13768000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ import {updateStudent} from "../repositories/StudentRepository.js"
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
+    document.querySelector("body").classList.remove("fadeout");
     const submitButton = document.querySelector("#submit");
     submitButton.addEventListener("click",(event) => {
         event.preventDefault();

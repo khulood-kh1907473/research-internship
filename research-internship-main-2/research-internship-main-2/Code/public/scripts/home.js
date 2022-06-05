@@ -13,6 +13,7 @@ const actives = document.getElementsByClassName(" active");
 
 
 async function start(){
+    document.querySelector("body").classList.remove("fadeout");
     nextFunction();
 
     const next = document.querySelector("#next");

@@ -3,6 +3,7 @@ import {getStats} from "../repositories/StudentRepository.js"
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
+    document.querySelector("body").classList.remove("fadeout");
     const {count, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10} = await getStats();
 
     const x = [];
