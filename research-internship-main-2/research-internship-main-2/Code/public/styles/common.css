@@ -127,6 +127,20 @@ input[type=text], input[type=email], input[type=password] {
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
 }
 
+audio {
+    transition:all 0.5s;
+    -webkit-box-shadow:  2px var(--color-dark-purple);
+    box-shadow: 4px var(--color-dark-purple);
+    -webkit-border-radius:7px;
+    border-radius:5px;
+}
+
+audio:hover{
+    box-shadow: 15px 15px 20px var(--color-dark-purple);
+    -webkit-transform: scale(1.05);
+}
+
+
 @media (max-width: 700px) {
     nav ul {
         display: flex;
