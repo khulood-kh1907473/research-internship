@@ -1,4 +1,5 @@
 let position = 1;
+let toggle = false;
 
 document.addEventListener("DOMContentLoaded", start);
 const progress = document.getElementById("progress");
@@ -14,7 +15,7 @@ const actives = document.getElementsByClassName(" active");
 async function start(){
 
     const next = document.querySelector("#next");
-    //const previous = document.querySelector("#previous");
+    const previous = document.querySelector("#previous");
     const item1 = document.querySelector("#i1");
     const item2 = document.querySelector("#i2");
     const item3 = document.querySelector("#i3");
@@ -34,12 +35,24 @@ async function start(){
 
     next.addEventListener("click", (event) => {
         event.preventDefault();
+        toggle=false;
         nextFunction();
     })
-    // previous.addEventListener("click", (event) => {
-    //     event.preventDefault();
-    //     previousFunction();
-    // })
+     previous.addEventListener("click", (event) => {
+         event.preventDefault();
+         toggle=false;
+         previousFunction();
+     });
+
+    let showSolution = document.querySelectorAll(".show-answer-button");
+    showSolution.forEach((element) => {
+        element.addEventListener("click", (event) => {
+            event.preventDefault();
+            let location = getPosition();
+            toggleSolution(toggle, element, location);
+        })
+    });
+
     item1.addEventListener("click", (event) => {
         event.preventDefault();
         selectItem(1);
@@ -106,12 +119,12 @@ async function start(){
     })
 }
 
-// function previousFunction(){
-//     position = position - 1;
-//     if(position < 1)
-//         position = 1;
-//     content();  
-// }
+ function previousFunction(){
+     position = position - 1;
+     if(position < 1)
+         position = 1;
+     content();
+ }
 
 function nextFunction(){
     position = position + 1;    
@@ -155,5 +168,30 @@ function selectItem(index){
         }
         
     }
+}
+
+async function toggleSolution(toggleInstance, toggleButton, location){
+    console.log(toggleInstance);
+    if(document.querySelector(`#solution-${location}`).style.opacity === "1"){
+        toggleButton.innerHTML = "Show Answer";
+        const element = document.querySelector(`#solution-${location}`);
+        element.style.visibility = "hidden";
+        element.style.opacity = "0";
+        element.style.height = "0";
+    }
+    else{
+        toggleButton.innerHTML = "Hide Answer";
+        const element = document.querySelector(`#solution-${location}`);
+        element.style.visibility = "visible";
+        element.style.opacity = "1";
+        element.style.transition = "opacity 1s linear";
+        element.style.height = "auto";
+
+    }
+    toggle = !toggleInstance;
+}
+
+function getPosition(){
+    return position;
 }
 

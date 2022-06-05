@@ -2,61 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/models/student.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/models/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/data/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/StudentRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/UserRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/statistics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/statistics.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/statistics.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/repository/student-repo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/repository/users-repo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/service/student-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/service/user-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/excellent .jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/excellent .jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/good.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/good.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/graph.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep1.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep1.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep10.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep10.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep11.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep11.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep12.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep12.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep13.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep13.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep14.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep14.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep15.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep15.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep16.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep16.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep2.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep2.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep3.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep3.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep4.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep4.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep5.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep5.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep6.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep6.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep7.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep7.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep8.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep8.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/homep9.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/homep9.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/media/veryGood.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/veryGood.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/scripts/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/styles/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/research-internship-main-2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/testing" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -127,7 +76,9 @@
       <workItem from="1654113669505" duration="4459000" />
       <workItem from="1654125617416" duration="1837000" />
       <workItem from="1654174182167" duration="9183000" />
-      <workItem from="1654301531237" duration="1919000" />
+      <workItem from="1654301531237" duration="2717000" />
+      <workItem from="1654412153741" duration="2764000" />
+      <workItem from="1654455451226" duration="3825000" />
     </task>
     <servers />
   </component>
