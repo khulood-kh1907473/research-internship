@@ -57,11 +57,11 @@ async function start(){
         })
     });
     const items = [];
-    for(let i =0; i<16; i++){
-        let item = document.querySelector(`#i${i+1}`);
+    for(let i =1; i<17; i++){
+        let item = document.querySelector(`#i${i}`);
          item.addEventListener("click", (event) =>{
            event.preventDefault();
-           selectItem(i+1);
+           selectItem(i);
        }) ;
     }
 
@@ -165,7 +165,7 @@ function content(actual, previous){
     else
         for (let i = previous; i >= actual; i--){
             circles[i].classList.remove("active");
-            circles[i].classList.add("inactive");
+          //  circles[i].classList.add("inactive");
         }
 
     const actualContent = document.getElementById(actual);

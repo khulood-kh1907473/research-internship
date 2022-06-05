@@ -60,7 +60,7 @@ async function teacherForm(){
     if (user.exists) {
         document.querySelector("body").classList.add("fadeout");
         window.setTimeout(() => {
-            window.location.href = "../survey-statistics.html.html";
+            window.location.href = "../survey-statistics.html";
         },3000);
     } else {
         alert("Incorrect email or password!");

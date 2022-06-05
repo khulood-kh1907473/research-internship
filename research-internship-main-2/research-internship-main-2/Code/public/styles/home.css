@@ -137,7 +137,7 @@ footer > div > a:hover{
 
 .progree-container::before{
     content: "";
-    background-color: var(--color-dark-purple);
+    background-color: var(--color-lighter-purple);
     position: absolute;
     top: 50%;
     left: 0;
@@ -149,7 +149,7 @@ footer > div > a:hover{
 }
 
 .progress{
-    background-color: var(--color-lighter-purple);
+    background-color: var(--color-light-purple);
     position: absolute;
     top: 50%;
     left: 0;
