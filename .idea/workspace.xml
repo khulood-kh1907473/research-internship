@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/test-statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/test-statistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/research-internship-main-2/Code/public/scripts/survey.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +109,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -44,7 +44,7 @@ async function studentForm(){
     if(response === null) {
         document.querySelector("body").classList.add("fadeout");
         window.setTimeout(() => {
-            window.location.href = "../home.html";
+            window.location.href = "../survey.html";
         },3000);
     }
 }

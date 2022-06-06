@@ -27,6 +27,10 @@ async function start(){
      await updateStudent(email, values);
      console.log(values);
      console.log(email);
+     window.setTimeout(() => {
+         window.location.href = "../survey.html";
+     },3000);
+
      //getStudent()
      return values;
  }
