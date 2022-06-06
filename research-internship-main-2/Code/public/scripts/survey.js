@@ -3,6 +3,7 @@ import {updateStudent} from "../repositories/StudentRepository.js"
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
+    document.querySelector("body").classList.remove("fadeout");
     const submitButton = document.querySelector("#submit");
     submitButton.addEventListener("click",(event) => {
         event.preventDefault();
@@ -26,6 +27,10 @@ async function start(){
      await updateStudent(email, values);
      console.log(values);
      console.log(email);
+     window.setTimeout(() => {
+         window.location.href = "../survey.html";
+     },3000);
+
      //getStudent()
      return values;
  }

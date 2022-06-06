@@ -1,71 +1,115 @@
 
-function start(){
-  document.getElementById("start").style.display = "none";
-  document.getElementById("form").style.display = "block";
-  document.getElementById('timer').innerHTML =
-      01 + ":" + 00;
-  startTimer();
+const results = document.getElementsByClassName(" questionsResult");
 
+function changedButton(){
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var name = document.getElementById('studentName').value;
+    if(!regName.test(name)){
+        alert('Invalid name given.');
+    }else{
+        if (document.getElementById("start").innerHTML == "Submit") {
+            // document.getElementById("start").innerHTML = "Start";
+            document.getElementById("timeLeft").innerHTML = " ";
+            submitFunction();
 
-  function startTimer() {
-    var presentTime = document.getElementById('timer').innerHTML;
+        }
+        else{
+            document.getElementById("start").innerHTML = "Submit";
+            start();
+        }
+    }
+}
+
+function submitFunction(){
+    document.getElementById("boxTxt").innerHTML = "Your score is: " + showScore() + " / 7";
+    document.getElementById("boxBack").classList.add("show");
+}
+
+function feedBack () {
+    document.getElementById("boxBack").classList.remove("show");
+    document.getElementById("timeLeft").innerHTML = "Score: " + showScore() + " / 7";
+    for (let i=0; i<results.length+1; i++){
+        results[i].style.display = "block";
+        //window.location.href = "result.html";
+    }
+}
+
+function showScore()
+{
+    score = 0;
+    let answer1 = document.getElementById("QuestionOneAnswerOne").checked;
+    let answer2 = document.getElementById("QuestionTwoAnswerFour").checked;
+    let answer3 = document.getElementById("QuestionThreeAnswerThree").checked;
+    let answer4 = document.getElementById("QuestionFourAnswerOne").checked;
+    let answer5 = document.getElementById("QuestionFiveAnswerOne").checked;
+    let answer6 = document.getElementById("QuestionSixAnswerFour").checked;
+    let answer7 = document.getElementById("QuestionSevenAnswerThree").checked;
+
+    const correctAnswers = [ answer1, answer2, answer3, answer4, answer5, answer6, answer7 ];
+
+    // document.getElementById("timeLeft").innerHTML = correctAnswers.length;
+    for (let i=0; i<correctAnswers.length; i++){
+        if (correctAnswers[i] == true){
+            score = score + 1;
+            document.getElementById("question"+(i+1)+"Result").innerHTML = "Correct &#10003";
+            document.getElementById("question"+(i+1)+"Result").style.color = "green";
+        }else{
+            document.getElementById("question"+(i+1)+"Result").innerHTML = "Wrong &#10007";
+            document.getElementById("question"+(i+1)+"Result").style.color = "red";
+        }
+    }
+
+    // for (let i=0; i<results.length; i++){
+    //   document.getElementById("timeLeft").innerHTML = results[0].innerHTML;
+    //   document.getElementById("question1feedback").style.display = "block";
+
+    //   if(results[i].innerHTML == "Wrong &#10007"){
+    //     document.getElementById("question"+(i+1)+"feedback").style.display = "block";
+    //   }
+    // }
+
+    return score;
+}
+
+function start() {
+    document.getElementById("studentName").setAttribute('readonly', true);
+    document.getElementById("form").style.display = "block";
+    document.getElementById('timer').innerHTML = 07 + ":" + 00;
+    startTimer();
+}
+
+function startTimer() {
+    presentTime = document.getElementById('timer').innerHTML;
     var timeArray = presentTime.split(/[:]+/);
     var m = timeArray[0];
     var s = checkSecond((timeArray[1] - 1));
-    if(s==59){m=m-1}
-    if(m<0){
-      return
+    if(s==59){
+        m=m-1
     }
-
-    document.getElementById('timer').innerHTML =
-        m + ":" + s;
-    console.log(m)
+    if(m<0){
+        return
+    }
+    document.getElementById('timer').innerHTML = m + ":" + s;
     setTimeout(startTimer, 1000);
+    if (m == 0 && s <=59){
+        document.getElementById("timeLeft").style.color = "red";
+    }
+    if (m == 0 && s == 0){
+        document.getElementById("timeLeft").innerHTML = "00  :  00";
+        document.getElementById("form").style.display = "none";
+        document.getElementById("form").style.display = "block";
+        document.getElementById("boxTxt").innerHTML = "Time's up";
+        document.getElementById("boxBack").classList.add("show");
+    }
+}
 
-  }
+// function stopTimer(){
+//   let stoppedTime = document.getElementById('timer').innerHTML = presentTime;
+//   return stoppedTime;
+// }
 
-  function checkSecond(sec) {
+function checkSecond(sec) {
     if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
     if (sec < 0) {sec = "59"};
     return sec;
-  }
 }
-function myFunction() {
-
-  score = 0
-  let answer1 = document.getElementById("less").checked
-  let answer2 = document.getElementById("true2").checked
-  let answer3 = document.getElementById("true3").checked
-  let answer4 = document.getElementById("answer44").checked
-
-  if (answer1 == true )
-    score = score + 1
-  if (answer2 == true)
-    score = score + 1
-  if (answer3 == true)
-    score = score + 1
-  if (answer4 == true)
-    score = score + 1
-
-  document.getElementById("score").innerHTML = "Score: " + score + " / 4  "
-
-  if (score==4){
-    document.getElementById("excellent").style.display = "block";
-    document.getElementById("veryGood").style.display = "none";
-    document.getElementById("good").style.display = "none";
-  }
-  else if (score < 4 && score >2){
-    document.getElementById("excellent").style.display = "none";
-    document.getElementById("veryGood").style.display = "block";
-    document.getElementById("good").style.display = "none";
-  }else{
-    document.getElementById("excellent").style.display = "none";
-    document.getElementById("veryGood").style.display = "none";
-    document.getElementById("good").style.display = "block";
-  }
-
-}
-
-
-
-

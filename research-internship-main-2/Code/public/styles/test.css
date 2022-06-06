@@ -2,14 +2,6 @@ h1{
     font-size: 45px;
 }
 
-body{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 20px;
-}
-
 main{
     padding: 3vw 25vw;
     display: flex;
@@ -31,21 +23,17 @@ header{
 @media (max-width: 700px) {
 }
 
-img{
-    position: absolute;
-    top: 25%;
-    bottom: 50%;
-    right: 25%;
-    left: 25%;
-    display: none;
-    width: 50%;
+/* img{
+  position: absolute;
+  top: 25%;
+  bottom: 50%;
+  right: 25%;
+  left: 25%;
+  display: none;
+  width: 50%;
 
-}
+} */
 
-#excellent #veryGood #good {
-    display: none;
-    z-index: 1;
-}
 
 #timeLeft{
     color:black;
@@ -62,6 +50,47 @@ img{
 #form{
     display: none;
 }
+
+
+#boxBack {
+    position: fixed; z-index: 999;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    /* background: rgba(0, 0, 0, 0.5); */
+    display: none;
+}
+
+#boxBack.show {
+    display: block;
+}
+
+#boxWrap {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 300px; max-width: 600px;
+    padding: 10px;
+
+    background: #fff;
+}
+
+.questionsResult{
+    display: none;
+    color: greenyellow;
+}
+
+.disabled {
+    display: none;
+
+}
+
+#timeLeft{
+    font-size: 40px;
+    margin: 16px;
+}
+
+
 
 
 

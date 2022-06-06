@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=PT+Mono&family=Prata&family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -19,98 +20,185 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="survey.html">Survey</a></li>
         <li class="selected"><a href="test.html">Test</a></li>
+        <li><a href="result.html">Result</a></li>
         <span class="exit">&#10006</span>
     </ul>
     <span class="hamburger">&#9776</span>
 </nav>
-<div id = "score">
-    Score: / 4
+
+<!-- <div id = "score">
+    Score:  / 4
+</div> -->
+
+<div id = "timeLeft"> Time left =   <span id="timer"></span>
 </div>
 
-<div id = "timeLeft"> Time left =   <span id="timer">
-</span></div>
-<button id = "start" onclick="start()"> Start </button>
 
 <main>
     <h1>Test</h1>
 
     <header>
-        <label>Name: </label>
-        <input type="text" id="studentName">
+        <input type="text" id="studentName"  value = "" placeholder="firstName secondName" required >
+
     </header>
     <form id = "form">
         <div class="main-container">
             <br>
-            <label class = "labels" for=""><b>1. Which sign would complete the statement -3 [] 2 indicating that 2 is greater than -3?</b></label>
+            <label class = "labels" for=""><b> 1. Find the domain of the following expressions:
+                <math><mfrac> = <mi>x+1</mi> <mi>x-7</mi> </mfrac> </math>
+            </b></label>
+            <br>
             <br>
             <div class="question">
-                <input type="radio" id="greater" name="first"
-                       value="greater">
-                <label for="greater"> > </label><br>
-                <input type="radio" id="less" name="first" value="less">
-                <label for="less"> < </label> <br>
-                <input type="radio" id="equal" name="first" value="equal">
-                <label for="equal"> = </label>
+                <input type="radio" id="QuestionOneAnswerOne" name="first" value="QuestionOneAnswerOne" checked>
+                <label for="QuestionOneAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionOneAnswerTwo" name="first" value="QuestionOneAnswerTwo">
+                <label for="QuestionOneAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionOneAnswerThree" name="first" value="QuestionOneAnswerThree">
+                <label for="QuestionOneAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionOneAnswerFour" name="first" value="QuestionOneAnswerFour">
+                <label for="QuestionOneAnswerFour"> answer4 </label><br>
             </div>
+            <h3 id="question1Result" class="questionsResult">  </h3>
+            <div id="question1feedback" class="disabled"> <a href="home.html" id="#"  > Rational Function </a> </div>
 
-
-            <hr>
             <br>
-            <label class = "labels" for=""><b> 2. Is (3+4)+5 the same as 3+(4+5)? </b></label>
-            <br>
-            <div id = second class="question" >
-                <input type="radio" id="true2" name="second"
-                       value="true2">
-                <label for="true2"> true </label><br>
-                <input type="radio" id="false2" name="second" value="false2">
-                <label for="false2"> false </label><br>
 
-            </div>
-
-            <hr>
             <br>
-            <label  for=""><b>3. (true or false) The number 3.333... is greater than 3.333.?</b></label>
+            <label class = "labels" for=""><b> 2. Find the domain and the range of the following expressions:
+                <math> <mfrac> = <mi>1</mi> <mi>x-2</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
             <br>
             <div class="question">
-                <input type="radio" id="true3" name="third"
-                       value="true3">
-                <label for="true3"> true </label><br>
-                <input type="radio" id="false3" name="third" value="false3">
-                <label for="false3"> false </label><br>
+                <input type="radio" id="QuestionTwoAnswerOne" name="second" value="QuestionTwoAnswerOne" checked>
+                <label for="QuestionTwoAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionTwoAnswerTwo" name="second" value="QuestionTwoAnswerTwo">
+                <label for="QuestionTwoAnswerOne"> answer2 </label><br>
+                <input type="radio" id="QuestionTwoAnswerThree" name="second" value="QuestionTwoAnswerThree">
+                <label for="QuestionTwoAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionTwoAnswerFour" name="second" value="QuestionTwoAnswerFour">
+                <label for="QuestionTwoAnswerFour"> answer4 </label><br>
             </div>
+            <h3 id="question2Result" class="questionsResult">  </h3>
+            <div id="question2feedback" class="disabled"> <a href="home.html" id="#"  > Finding the domain & the range of the rational function </a> </div>
 
-
-            <hr>
             <br>
-            <label class = "labels" for=""><b> 4. Find f.g if f(x)=6x-1 and g(x)=7x+7. </b></label>
-            <br>
-            <div class="question" >
-                <input type="radio" id="answer41" name="fourth" value="answer41">
-                <label for="answer41"> 13x<sup>2</sup> + 35x + 6 </label><br>
-                <input type="radio" id="answer42" name="fourth" value="answer42">
-                <label for="answer42"> 42x<sup>2</sup> + x − 7 </label><br>
-                <input type="radio" id="answer43" name="fourth" value="answer43">
-                <label for="answer43"> 42x<sup>2</sup> + 35x − 7 </label><br>
-                <input type="radio" id="answer44" name="fourth" value="answer44">
-                <label for="answer44"> 42x<sup>2</sup> − 7 </label><br>
-            </div>
 
-            <div class="buttons">
-                <button type="button" value="submit" onclick="myFunction()">
-                    Submit
-                </button>
-                <button type="reset" value="reset">
-                    Reset
-                </button>
+            <br>
+            <label class = "labels" for=""><b> 3. Find the asymptotes for the following expressions:
+                <math> <mfrac> = <mi>5</mi> <mi>x-1</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
+            <br>
+            <div class="question">
+                <input type="radio" id="QuestionThreeAnswerOne" name="three" value="QuestionThreeAnswerOne" checked>
+                <label for="QuestionThreeAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionThreeAnswerTwo" name="three" value="QuestionThreeAnswerTwo">
+                <label for="QuestionThreeAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionThreeAnswerThree" name="three" value="QuestionThreeAnswerThree">
+                <label for="QuestionThreeAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionThreeAnswerFour" name="three" value="QuestionThreeAnswerFour">
+                <label for="QuestionThreeAnswerFour"> answer4 </label><br>
             </div>
+            <h3 id="question3Result" class="questionsResult" >  </h3>
+            <!-- <a href="home.html" id="#" class="disabled" > What is a Rational Function? </a>   -->
+
+            <br>
+            <label class = "labels" for=""><b> 4. Find the vertical asymptotes, and the holes if found for the following expressions:
+                <math> <mfrac> = <mi>x<mn>2</mn>-x-6</mi> <mi>x<mn>2</mn>-9</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
+            <br>
+            <div class="question">
+                <input type="radio" id="QuestionFourAnswerOne" name="four" value="QuestionFourAnswerOne" checked>
+                <label for="QuestionFourAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionFourAnswerTwo" name="four" value="QuestionFourAnswerTwo">
+                <label for="QuestionFourAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionFourAnswerThree" name="four" value="QuestionFourAnswerThree">
+                <label for="QuestionFourAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionFourAnswerFour" name="four" value="QuestionFourAnswerFour">
+                <label for="QuestionFourAnswerFour"> answer4 </label><br>
+            </div>
+            <h3 id="question4Result" class="questionsResult" > </h3>
+            <!-- <a href="home.html" id="#" class="disabled" > What is a Rational Function? </a>   -->
+
+            <br>
+            <label class = "labels" for=""><b> 5. Find the horizontal and slant asymptotes for the following expressions:
+                <math> <mfrac> = <mi>x+3</mi> <mi>x<mn>2</mn>+9</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
+            <br>
+            <div class="question">
+                <input type="radio" id="QuestionFiveAnswerOne" name="five" value="QuestionFiveAnswerOne" checked>
+                <label for="QuestionFiveAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionFiveAnswerTwo" name="five" value="QuestionFiveAnswerTwo">
+                <label for="QuestionFiveAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionFiveAnswerThree" name="five" value="QuestionFiveAnswerThree">
+                <label for="QuestionFiveAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionFiveAnswerFour" name="five" value="QuestionFiveAnswerFour">
+                <label for="QuestionFiveAnswerFour"> answer4 </label><br>
+            </div>
+            <h3 id="question5Result" class="questionsResult" >   </h3>
+            <!-- <a href="home.html" id="#" class="disabled" > What is a Rational Function? </a>  -->
+
+            <br>
+            <label class = "labels" for=""><b> 6. Graph the following function:
+                <math> <mfrac> = <mi>-3x+12</mi> <mi>x<mn>2</mn>-3x-4</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
+            <br>
+            <div class="question">
+                <input type="radio" id="QuestionSixAnswerOne" name="six" value="QuestionSixAnswerOne" checked >
+                <label for="QuestionSixAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionSixAnswerTwo" name="six" value="QuestionSixAnswerTwo">
+                <label for="QuestionSixAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionSixAnswerThree" name="six" value="QuestionSixAnswerThree">
+                <label for="QuestionSixAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionSixAnswerFour" name="six" value="QuestionSixAnswerFour">
+                <label for="QuestionSixAnswerFour"> answer4 </label><br>
+            </div>
+            <h3 id="question6Result" class="questionsResult" >  </h3>
+            <!-- <a href="home.html" id="#" class="disabled" > What is a Rational Function? </a>  -->
+
+            <br>
+            <label class = "labels" for=""><b> 7. Find the inverse rational function for the following expressions:
+                <math> <mfrac> = <mi>1-2x</mi> <mi>1-x</mi> </mfrac> </math>
+            </b> </label>
+
+            <br>
+            <br>
+            <div class="question">
+                <input type="radio" id="QuestionSevenAnswerOne" name="seven" value="QuestionSevenAnswerOne" checked >
+                <label for="QuestionSevenAnswerOne"> answer1 </label><br>
+                <input type="radio" id="QuestionSevenAnswerTwo" name="seven" value="QuestionSevenAnswerTwo">
+                <label for="QuestionSevenAnswerTwo"> answer2 </label><br>
+                <input type="radio" id="QuestionSevenAnswerThree" name="seven" value="QuestionSevenAnswerThree">
+                <label for="QuestionSevenAnswerThree"> answer3 </label><br>
+                <input type="radio" id="QuestionSevenAnswerFour" name="seven" value="QuestionSevenAnswerFour">
+                <label for="QuestionSevenAnswerFour"> answer4 </label><br>
+            </div>
+            <h3 id="question7Result" class="questionsResult" >   </h3>
+            <!-- <a href="home.html" id="#" class="disabled" > What is a Rational Function? </a>  -->
+
     </form>
 
 
-    <img id = 'excellent' src="media/excellent%20.jpeg" alt="img"  >
-    <img id = 'veryGood' src="media/veryGood.jpeg" alt="img" >
-    <img id = 'good' src="media/good.jpeg" alt="img"  >
+    <!-- (A) HTML DIALOG BOX -->
+    <div id="boxBack"><div id="boxWrap">
+        <div id="boxTxt"></div>
+        <button type="button" value="Feedback" onclick="feedBack()"> Feedback </button>
+    </div>
+    </div>
 
     </div>
+    <button id = "start" onclick="changedButton()"> Start </button>
+
 
 </main>
 </body>

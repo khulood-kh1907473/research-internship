@@ -17,6 +17,18 @@ export default class StudentRepo {
                 }
             });
 
+            await Student.deleteMany();
+            try {
+                const data = await fs.readJSON(`./public/data/students.json`);
+                data.forEach(async (element) => {
+                    await Student.create(element);
+                });
+            } catch (error) {
+                console.log("Error initialising", Student);
+                console.log(error);
+            }
+
+
             await Users.deleteMany(); //initalize teacher login details
             try {
                 const data = await fs.readJSON(`./public/data/users.json`);
