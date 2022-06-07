@@ -148,6 +148,8 @@ function nextFunction(){
 }
 
 function content(actual, previous){
+    if(actual === previous)
+        return;
 
     // for(let i = 1; i<17; i++){
     //     if ( i < position){
@@ -156,17 +158,26 @@ function content(actual, previous){
     //        // circles[i].classList.remove("active");
     //     }
     // }
+    console.log(previous);
+    console.log(actual);
 
     if(actual > previous) {
         for (let i = previous; i < actual; i++) {
             circles[i].classList.add("active");
         }
     }
-    else
-        for (let i = previous; i >= actual; i--){
-            circles[i].classList.remove("active");
-          //  circles[i].classList.add("inactive");
+    else {
+        if(previous === 16){
+            for (let i = previous; i > actual; i--)
+            circles[i-1].classList.remove("active");
         }
+        else {
+            for (let i = previous; i >= actual; i--) {
+                circles[i].classList.remove("active");
+                //  circles[i].classList.add("inactive");
+            }
+        }
+    }
 
     const actualContent = document.getElementById(actual);
     actualContent.style.visibility = "visible";

@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/report.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/models/student.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/data/students.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/data/students.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/StudentRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/StudentRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey-statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey-statistics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey-statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey-statistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/test-statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/test-statistics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/repository/student-repo.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/repository/student-repo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/service/student-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/service/student-service.js" afterDir="false" />
@@ -27,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,6 +43,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -56,10 +60,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.11.38" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -101,7 +107,10 @@
       <workItem from="1654507063749" duration="35000" />
       <workItem from="1654507100094" duration="37000" />
       <workItem from="1654507150659" duration="87000" />
-      <workItem from="1654507248871" duration="25986000" />
+      <workItem from="1654507248871" duration="29162000" />
+      <workItem from="1654577982205" duration="4088000" />
+      <workItem from="1654583287017" duration="4415000" />
+      <workItem from="1654603350177" duration="5836000" />
     </task>
     <servers />
   </component>
@@ -134,5 +143,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
