@@ -46,23 +46,22 @@ export default class StudentRepo {
     }
 
     async addStudent(student){
-        await Student.create(student);
+        const studentObject = await Student.create(student);
+        return studentObject._id.toString();
     }
 
-    async updateStudent(email, answer){
+    async updateStudentSurvey(uuid, answer){
         try{
-            return await Student.updateOne({email},{
-                question1: answer.question1,
-                question2: answer.question2,
-                question3: answer.question3,
-                question4: answer.question4,
-                question5: answer.question5,
-                question6: answer.question6,
-                question7: answer.question7,
-                question8: answer.question8,
-                question9: answer.question9,
-                question10: answer.question10
-            });
+            return await Student.findOneAndUpdate({_id: uuid},{survey: answer});
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    async updateStudentTest(uuid, answer){
+        try{
+            return await Student.findOneAndUpdate({_id: uuid},{test: answer});
         }
         catch (e) {
             console.log(e);
@@ -70,42 +69,23 @@ export default class StudentRepo {
     }
 
     async getStats(){
-
-        const count = await Student.aggregate([
-            { $group: { _id: "$_v", count: { $sum: 1 } } },
+        const participants = await Student.aggregate([
+            { $group: { _id: null, count: { $sum: 1 } } },
         ]);
 
-        const q1 = await Student.aggregate([
-            { $group: { _id: "$question1", count: { $sum: 1 } } },
-        ]);
-        const q2 = await Student.aggregate([
-            { $group: { _id: "$question2", count: { $sum: 1 } } },
-        ]);
-        const q3 = await Student.aggregate([
-            { $group: { _id: "$question3", count: { $sum: 1 } } },
-        ]);
-        const q4 = await Student.aggregate([
-            { $group: { _id: "$question4", count: { $sum: 1 } } },
-        ]);
-        const q5 = await Student.aggregate([
-            { $group: { _id: "$question5", count: { $sum: 1 } } },
-        ]);
-        const q6 = await Student.aggregate([
-            { $group: { _id: "$question6", count: { $sum: 1 } } },
-        ]);
-        const q7 = await Student.aggregate([
-            { $group: { _id: "$question7", count: { $sum: 1 } } },
-        ]);
-        const q8 = await Student.aggregate([
-            { $group: { _id: "$question8", count: { $sum: 1 } } },
-        ]);
-        const q9 = await Student.aggregate([
-            { $group: { _id: "$question9", count: { $sum: 1 } } },
-        ]);
-        const q10 = await Student.aggregate([
-            { $group: { _id: "$question10", count: { $sum: 1 } } },
-        ]);
+        const statAnalysis = [];
+        for(let j = 0; j<10; j++) {
+            let answers = await Student.aggregate([
+                {
+                    "$group": {
+                        "_id": {"$arrayElemAt": ["$survey", j]},
+                        "count": {"$sum": 1}
+                    }
+                }
+            ])
+            statAnalysis.push(answers);
+        }
 
-        return {count, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10};
+        return {participants, statAnalysis};
 }
 }

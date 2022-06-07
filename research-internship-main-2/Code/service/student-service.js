@@ -13,9 +13,22 @@ export default class StudentService {
         }
     }
 
-    async updateStudent(req, res) {
+    async updateStudentSurvey(req, res) {
         try {
-            const student = await studentRepo.updateStudent(req.params.email, req.body);
+            const student = await studentRepo.updateStudentSurvey(req.params.uuid, req.body);
+            if(student)
+                res.status(200).json(student);
+            else
+                res.sendStatus(404);
+        }
+        catch(e){
+            res.status(500).send(e);
+        }
+    }
+
+    async updateStudentTest(req, res) {
+        try {
+            const student = await studentRepo.updateStudentTest(req.params.uuid, req.body);
             if(student)
                 res.status(200).json(student);
             else

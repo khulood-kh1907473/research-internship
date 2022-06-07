@@ -1,7 +1,15 @@
+import {updateStudentTest} from "../repositories/StudentRepository.js"
 
-const results = document.getElementsByClassName(" questionsResult");
+let results;
 
-function changedButton(){
+document.addEventListener("DOMContentLoaded", () => {
+    const result = document.getElementsByClassName(" questionsResult");
+    results = result;
+    const button = document.querySelector("#start");
+    button.addEventListener("click", changedButton);
+});
+
+async function changedButton(){
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
     var name = document.getElementById('studentName').value;
     if(!regName.test(name)){
@@ -10,7 +18,7 @@ function changedButton(){
         if (document.getElementById("start").innerHTML == "Submit") {
             // document.getElementById("start").innerHTML = "Start";
             document.getElementById("timeLeft").innerHTML = " ";
-            submitFunction();
+            await submitFunction();
 
         }
         else{
@@ -20,9 +28,11 @@ function changedButton(){
     }
 }
 
-function submitFunction(){
-    document.getElementById("boxTxt").innerHTML = "Your score is: " + showScore() + " / 7";
+async function submitFunction(){
+    document.getElementById("boxTxt").innerHTML = "Your score is: " + await showScore() + " / 7";
     document.getElementById("boxBack").classList.add("show");
+    const feedback = document.querySelector("#feedback");
+    feedback.addEventListener("click", feedBack);
 }
 
 function feedBack () {
@@ -34,9 +44,9 @@ function feedBack () {
     }
 }
 
-function showScore()
+async function showScore()
 {
-    score = 0;
+    let score = 0;
     let answer1 = document.getElementById("QuestionOneAnswerOne").checked;
     let answer2 = document.getElementById("QuestionTwoAnswerFour").checked;
     let answer3 = document.getElementById("QuestionThreeAnswerThree").checked;
@@ -46,18 +56,23 @@ function showScore()
     let answer7 = document.getElementById("QuestionSevenAnswerThree").checked;
 
     const correctAnswers = [ answer1, answer2, answer3, answer4, answer5, answer6, answer7 ];
-
+    const values = [];
     // document.getElementById("timeLeft").innerHTML = correctAnswers.length;
     for (let i=0; i<correctAnswers.length; i++){
         if (correctAnswers[i] == true){
             score = score + 1;
+            values.push(1);
             document.getElementById("question"+(i+1)+"Result").innerHTML = "Correct &#10003";
             document.getElementById("question"+(i+1)+"Result").style.color = "green";
         }else{
+            values.push(0);
             document.getElementById("question"+(i+1)+"Result").innerHTML = "Wrong &#10007";
             document.getElementById("question"+(i+1)+"Result").style.color = "red";
         }
     }
+    console.log(values);
+    const uuid = sessionStorage.getItem("uuid");
+    await updateStudentTest(uuid, values);
 
     // for (let i=0; i<results.length; i++){
     //   document.getElementById("timeLeft").innerHTML = results[0].innerHTML;
@@ -74,7 +89,7 @@ function showScore()
 function start() {
     document.getElementById("studentName").setAttribute('readonly', true);
     document.getElementById("form").style.display = "block";
-    document.getElementById('timer').innerHTML = 07 + ":" + 00;
+    //document.getElementById('timer').innerHTML = 07 + ":" + 00;
     startTimer();
 }
 

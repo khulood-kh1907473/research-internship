@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="scripts/common.js"></script>
-    <script src="scripts/test.js"></script>
+    <script type="module" src="scripts/test.js"></script>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/test.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -218,12 +218,12 @@
     <!-- (A) HTML DIALOG BOX -->
     <div id="boxBack"><div id="boxWrap">
         <div id="boxTxt"></div>
-        <button type="button" value="Feedback" onclick="feedBack()"> Feedback </button>
+        <button type="button" value="Feedback" id="feedback"> Feedback </button>
     </div>
     </div>
 
     </div>
-    <button id = "start" onclick="changedButton()"> Start </button>
+    <button id = "start"> Start </button>
 
 
 </main>

@@ -13,9 +13,23 @@ export async function createStudent(student){
     }
 }
 
-export async function updateStudent(email, values){
+export async function updateStudentSurvey(uuid, values){
     try{
-        const student = await fetch(`api/students/${email}`, {
+        const student = await fetch(`api/students/${uuid}/survey`, {
+            headers: {"Content-Type": "application/json"},
+            method: "PUT",
+            body: JSON.stringify(values)
+        });
+        return await student.json();
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+export async function updateStudentTest(uuid, values){
+    try{
+        const student = await fetch(`api/students/${uuid}/test`, {
             headers: {"Content-Type": "application/json"},
             method: "PUT",
             body: JSON.stringify(values)

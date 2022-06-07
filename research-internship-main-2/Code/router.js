@@ -8,8 +8,11 @@ const studentService = new StudentService();
 router.route('/students')
     .post(studentService.addStudent);
 
-router.route('/students/:email')
-    .put(studentService.updateStudent);
+router.route('/students/:uuid/survey')
+    .put(studentService.updateStudentSurvey);
+
+router.route('/students/:uuid/test')
+    .put(studentService.updateStudentTest);
 
 router.route("/users")
     .post(usersServices.readUser);

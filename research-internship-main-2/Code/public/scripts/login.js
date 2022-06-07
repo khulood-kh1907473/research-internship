@@ -4,52 +4,43 @@ import {readUser} from "../repositories/UserRepository.js";
 document.addEventListener("DOMContentLoaded", start);
 
 async function start(){
+    let role = "none";
     document.querySelector("body").classList.remove("fadeout");
-    let role;
     const selectForm = document.querySelector("#occupation");
     selectForm.addEventListener("change", () => {
         role = selectForm.value;
-        document.querySelector("#role").style.height = "20vh";
-        if(role === "student") {
-            document.querySelector("#student").style.display = "flex";
+        if(role === "pre-service teacher" || role === "in-service teacher") {
+            document.querySelector("#role").style.height = "100vh";
             document.querySelector("#teacher").style.display = "none";
-            document.querySelector("#submit").innerHTML = "Submit";
+            document.querySelector("#submit").style.display = "none";
+            studentForm(role);
         }
         else {
+            document.querySelector("#role").style.height = "20vh";
             document.querySelector("#teacher").style.display = "flex";
-            document.querySelector("#student").style.display = "none";
-            document.querySelector("#submit").innerHTML = "Login";
+            document.querySelector("#submit").style.display = "block";
         }
     })
 
     const submit = document.querySelector("#submit");
     submit.addEventListener("click", (event) => {
         event.preventDefault();
-        let values;
-        if(role === "teacher")
-             teacherForm();
-        else
-             studentForm();
+        moderatorForm();
     });
 };
 
-async function studentForm(){
+async function studentForm(role){
     const values = {};
-    values.firstName = document.querySelector("#firstName").value;
-    values.lastName = document.querySelector("#lastName").value;
-    values.email = document.querySelector("#email").value;
-    values.grade = document.querySelector("#grade").value;
+    values.role = role;
     const response = await createStudent(values);
-    sessionStorage.setItem("email", values.email);
-    if(response === null) {
-        document.querySelector("body").classList.add("fadeout");
-        window.setTimeout(() => {
-            window.location.href = "../survey.html";
-        },3000);
-    }
+    sessionStorage.setItem("uuid", response);
+         document.querySelector("body").classList.add("fadeout");
+         window.setTimeout(() => {
+             window.location.href = "../survey.html";
+         },3000);
 }
 
-async function teacherForm(){
+async function moderatorForm(){
     const values = {};
     values.username = document.querySelector("#username").value;
     values.password = document.querySelector("#password").value;
