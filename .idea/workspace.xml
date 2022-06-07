@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/result.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/result.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <workItem from="1654507248871" duration="29162000" />
       <workItem from="1654577982205" duration="4088000" />
       <workItem from="1654583287017" duration="4415000" />
-      <workItem from="1654603350177" duration="9034000" />
+      <workItem from="1654603350177" duration="9726000" />
     </task>
     <servers />
   </component>
