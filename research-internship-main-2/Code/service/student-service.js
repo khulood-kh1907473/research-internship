@@ -13,6 +13,15 @@ export default class StudentService {
         }
     }
 
+    async getStudents(req, res) {
+        try {
+            const response = await studentRepo.getStudents();
+            res.json(response);
+        } catch (e) {
+            res.status(500).send(e);
+        }
+    }
+
     async updateStudentSurvey(req, res) {
         try {
             const student = await studentRepo.updateStudentSurvey(req.params.uuid, req.body);
