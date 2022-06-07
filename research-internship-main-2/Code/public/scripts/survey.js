@@ -22,6 +22,7 @@ async function start(){
      console.log(values);
      const uuid = sessionStorage.getItem("uuid");
      await updateStudentSurvey(uuid, values);
+     document.querySelector("#popup").style.opacity = "0.9";
      window.setTimeout(() => {
          window.location.href = "../home.html";
      },3000);

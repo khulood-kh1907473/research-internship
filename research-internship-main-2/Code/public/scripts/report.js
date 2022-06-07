@@ -19,7 +19,13 @@ async function generateReport(){
         data.push(flat(element));
     });
     console.log(data);
+    data.unshift(["role",
+        "survey-question-1", "survey-question-2","survey-question-3","survey-question-4","survey-question-5",
+        "survey-question-6","survey-question-7","survey-question-8","survey-question-9","survey-question-10",
+        "test-question-1","test-question-2","test-question-3","test-question-4","test-question-5",
+        "test-question-6","test-question-7","date"]);
     const csvFile = await dataToCSV(data);
+    console.log(csvFile);
    await downloadFile(csvFile, 'studentSurvey.csv', 'text/csv;charset=utf-8;')
  }
 

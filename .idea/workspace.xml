@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/report.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/data/students.json" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/data/students.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/StudentRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/repositories/StudentRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/survey.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey-statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey-statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/test-statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/test-statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/repository/student-repo.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/repository/student-repo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/service/student-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/service/student-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +99,7 @@
       <workItem from="1654507248871" duration="29162000" />
       <workItem from="1654577982205" duration="4088000" />
       <workItem from="1654583287017" duration="4415000" />
-      <workItem from="1654603350177" duration="5836000" />
+      <workItem from="1654603350177" duration="8688000" />
     </task>
     <servers />
   </component>
