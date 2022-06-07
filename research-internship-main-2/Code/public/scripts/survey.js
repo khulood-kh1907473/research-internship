@@ -12,7 +12,7 @@ async function start(){
 }
 
  async function getFormValues(){
-     const values = [];
+     let values = [];
      for(let i=0; i<10; i++){
       const element = document.getElementsByName(`question-${i+1}`);
       for(let j=0; j<element.length; j++)

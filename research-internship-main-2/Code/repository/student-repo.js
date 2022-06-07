@@ -10,6 +10,7 @@ export default class StudentRepo {
             const port = "27017";
             const database = "students";
             const uri = `mongodb://${hostname}:${port}/${database}`;
+           // const deploymenturi = `mongodb+srv://shadowomizi:qaIC1MvsrU4aUCOv@projects.o8ea3.mongodb.net/?retryWrites=true&w=majority`
 
             mongoose.connect(uri, async function(error) {
                 if (error) {
@@ -48,6 +49,15 @@ export default class StudentRepo {
     async addStudent(student){
         const studentObject = await Student.create(student);
         return studentObject._id.toString();
+    }
+
+    async getStudents(){
+        try{
+        return await Student.find({}, { _id: 0, __v: 0 }).sort({ date: 1 });
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     async updateStudentSurvey(uuid, answer){

@@ -6,6 +6,7 @@ const router = express.Router();
 const studentService = new StudentService();
 
 router.route('/students')
+    .get(studentService.getStudents)
     .post(studentService.addStudent);
 
 router.route('/students/:uuid/survey')

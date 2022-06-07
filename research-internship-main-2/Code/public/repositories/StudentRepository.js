@@ -53,3 +53,13 @@ export async function getStats(){
         console.log(e);
     }
 }
+
+export async function getStudents(){
+    try{
+        const result = await fetch(`/api/students`);
+        return await result.json();
+    }
+    catch(error){
+        console.log(error);
+    }
+}
