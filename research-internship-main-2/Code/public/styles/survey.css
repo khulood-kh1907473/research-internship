@@ -149,11 +149,75 @@ form div div div:nth-child(even){
 }
 
 
-@media (max-width: 1160px) {
-    
+@media (max-width: 975px) {
+    form > div > .question{
+        display: none;
+    }
+    .question{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .question > span{
+        display: none;
+    }
+    .question > div{
+        display: flex;
+        flex-direction: column;
+    }
+    .question > div{
+        width: 500px;
+    }
+
+    .question > label{
+        padding-bottom: 5px;
+    }
+    .question > div > input:nth-child(n)::after{
+        min-width: 300px;
+        content: "Strongly Agree";
+        font-family: 'PT Mono', monospace;
+        padding-left: 150px;
+        padding-bottom: 1px;
+        font-size: 15px;
+    }
+
+    .question > div > input:nth-child(2)::after{
+        content: "Agree";
+        padding-left: 70px;
+    }
+    .question > div > input:nth-child(3)::after{
+        content: "Neutral";
+        padding-left: 90px;
+    }
+    .question > div > input:nth-child(4)::after{
+        content: "Disagree";
+        padding-left: 100px;
+    }
+    .question > div > input:nth-child(5)::after{
+        content: "Strongly Disagree";
+        padding-left: 180px;
+    }
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
+    h1 {
+        padding-top: 15px;
+        font-size: 40px;
+    }
+}
 
+@media (max-width: 667px) {
+    h1 {
+        padding-top: 25px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 25px;
+    }
 }

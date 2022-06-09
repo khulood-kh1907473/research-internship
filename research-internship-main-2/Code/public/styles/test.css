@@ -19,6 +19,33 @@ header{
     padding-bottom: 1vw;
 }
 
+#popup{
+    opacity: 0;
+    background-color: var(--color-light-purple);
+    color: springgreen;
+    font-size: 17px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 100%;
+    height: 100px;
+    max-height: 100%;
+    border-radius: 5px;
+    transition: visibility 0s 0.7s, opacity 0.7s linear;
+}
+
+#popup > div{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#popup > div > span{
+    padding-right: 10px;
+}
+
 
 @media (max-width: 700px) {
 }
@@ -78,6 +105,18 @@ header{
 .questionsResult{
     display: none;
     color: greenyellow;
+}
+
+.question > div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    max-width: inherit;
+}
+
+.question > div > label{
+    width: 250px;
+    padding-left: 20px;
 }
 
 .disabled {

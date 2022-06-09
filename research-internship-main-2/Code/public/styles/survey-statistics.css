@@ -121,11 +121,80 @@ form div div div:nth-child(even){
     border-radius: 10px;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 975px) {
+    form > div > .question{
+        display: none;
+    }
+    .question{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .question > span{
+        display: none;
+    }
+    .question > div{
+        display: flex;
+        flex-direction: column;
+    }
+    .question > div{
+        width: 250px;
+    }
 
+    .question > label{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .question > div > span:nth-child(n)::before{
+        padding-left: 0px;
+        min-width: 170px;
+        content: "Strongly Agree: ";
+        font-family: 'PT Mono', monospace;
+        padding-bottom: 1px;
+        font-size: 15px;
+    }
+
+    .question > div > span{
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        text-align: start;
+        justify-content: stretch;
+    }
+
+    .question > div > span:nth-child(2)::before{
+        content: "Agree: ";
+    }
+    .question > div > span:nth-child(3)::before{
+        content: "Neutral:";
+    }
+    .question > div > span:nth-child(4)::before{
+        content: "Disagree:";
+    }
+    .question > div > span:nth-child(5)::before{
+        content: "Strongly Disagree:";
+    }
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
+    h1 {
+        padding-top: 15px;
+        font-size: 40px;
+    }
+}
 
+@media (max-width: 667px) {
+    h1 {
+        padding-top: 25px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 25px;
+    }
 }

@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8874f783-59b0-416f-811d-cf7f0d89e9d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/result.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/result.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/Correct.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/Wrong1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/Wrong2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/media/Wrong3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/scripts/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey-statistics.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey-statistics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/styles/survey.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/survey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research-internship-main-2/Code/public/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/research-internship-main-2/Code/public/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +60,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.14.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="16.11.38" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/research-internship-main-2/Code/public/media" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
@@ -64,11 +74,11 @@
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohammed Omar\Documents\GitHub\research-internship\research-internship-main-2\Code\public\media" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\Code\media" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\Code" />
       <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\Code\scripts" />
-      <recent name="C:\Users\USER\OneDrive\Documents\GitHub\research-internship\research-internship-main-2\styles" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,7 +108,9 @@
       <workItem from="1654507248871" duration="29162000" />
       <workItem from="1654577982205" duration="4088000" />
       <workItem from="1654583287017" duration="4415000" />
-      <workItem from="1654603350177" duration="9726000" />
+      <workItem from="1654603350177" duration="28752000" />
+      <workItem from="1654659014438" duration="3794000" />
+      <workItem from="1654774308562" duration="335000" />
     </task>
     <servers />
   </component>

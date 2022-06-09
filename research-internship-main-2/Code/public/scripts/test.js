@@ -10,29 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function changedButton(){
-    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    var name = document.getElementById('studentName').value;
-    if(!regName.test(name)){
-        alert('Invalid name given.');
-    }else{
-        if (document.getElementById("start").innerHTML == "Submit") {
-            // document.getElementById("start").innerHTML = "Start";
-            document.getElementById("timeLeft").innerHTML = " ";
-            await submitFunction();
-
-        }
-        else{
-            document.getElementById("start").innerHTML = "Submit";
-            start();
-        }
+    if (document.getElementById("start").innerHTML == "Submit") {
+        await submitFunction();
+    }
+    else{
+        document.getElementById("start").innerHTML = "Submit";
+        start();
     }
 }
 
 async function submitFunction(){
-    document.getElementById("boxTxt").innerHTML = "Your score is: " + await showScore() + " / 7";
-    document.getElementById("boxBack").classList.add("show");
-    const feedback = document.querySelector("#feedback");
-    feedback.addEventListener("click", feedBack);
+    const message = document.querySelector("#window-message");
+    document.querySelector("#popup").style.opacity = "0.9";
+    message.innerHTML = "Your score is: " + await showScore() + "/7. Your response was submitted. Thank you for your time";
+    window.setTimeout(async() => {
+        window.location.href = "../login.html";
+    },3000);
 }
 
 function feedBack () {
@@ -40,7 +33,6 @@ function feedBack () {
     document.getElementById("timeLeft").innerHTML = "Score: " + showScore() + " / 7";
     for (let i=0; i<results.length+1; i++){
         results[i].style.display = "block";
-        //window.location.href = "result.html";
     }
 }
 
@@ -57,7 +49,6 @@ async function showScore()
 
     const correctAnswers = [ answer1, answer2, answer3, answer4, answer5, answer6, answer7 ];
     const values = [];
-    // document.getElementById("timeLeft").innerHTML = correctAnswers.length;
     for (let i=0; i<correctAnswers.length; i++){
         if (correctAnswers[i] == true){
             score = score + 1;
@@ -74,57 +65,10 @@ async function showScore()
     const uuid = sessionStorage.getItem("uuid");
     await updateStudentTest(uuid, values);
 
-    // for (let i=0; i<results.length; i++){
-    //   document.getElementById("timeLeft").innerHTML = results[0].innerHTML;
-    //   document.getElementById("question1feedback").style.display = "block";
-
-    //   if(results[i].innerHTML == "Wrong &#10007"){
-    //     document.getElementById("question"+(i+1)+"feedback").style.display = "block";
-    //   }
-    // }
 
     return score;
 }
 
 function start() {
-    document.getElementById("studentName").setAttribute('readonly', true);
     document.getElementById("form").style.display = "block";
-    //document.getElementById('timer').innerHTML = 07 + ":" + 00;
-    startTimer();
-}
-
-function startTimer() {
-    presentTime = document.getElementById('timer').innerHTML;
-    var timeArray = presentTime.split(/[:]+/);
-    var m = timeArray[0];
-    var s = checkSecond((timeArray[1] - 1));
-    if(s==59){
-        m=m-1
-    }
-    if(m<0){
-        return
-    }
-    document.getElementById('timer').innerHTML = m + ":" + s;
-    setTimeout(startTimer, 1000);
-    if (m == 0 && s <=59){
-        document.getElementById("timeLeft").style.color = "red";
-    }
-    if (m == 0 && s == 0){
-        document.getElementById("timeLeft").innerHTML = "00  :  00";
-        document.getElementById("form").style.display = "none";
-        document.getElementById("form").style.display = "block";
-        document.getElementById("boxTxt").innerHTML = "Time's up";
-        document.getElementById("boxBack").classList.add("show");
-    }
-}
-
-// function stopTimer(){
-//   let stoppedTime = document.getElementById('timer').innerHTML = presentTime;
-//   return stoppedTime;
-// }
-
-function checkSecond(sec) {
-    if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-    if (sec < 0) {sec = "59"};
-    return sec;
 }

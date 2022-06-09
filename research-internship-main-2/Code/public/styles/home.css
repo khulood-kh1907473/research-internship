@@ -100,10 +100,6 @@ footer > div > a:hover{
     background-color: var(--color-dark-purple);
 }
 
-@media (max-width: 700px) {
-
-}
-
 /* 
 #myProgress {
     width: 0%;
@@ -128,6 +124,7 @@ footer > div > a:hover{
 
 .progree-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     margin-bottom: 30px;
@@ -213,3 +210,31 @@ footer > div > a:hover{
     background-color: var(--line-border-empty);
     cursor: not-allowed;
 } */
+
+@media (max-width: 820px) {
+    h3{
+        font-size: 35px;
+    }
+    .progress{
+        background-color: var(--color-baby-blue);
+        z-index: 0;
+    }
+    .progree-container::before{
+        display: none;
+    }
+    .progree-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .content{
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+    .content > p{
+        padding: 3vw 7vw;
+    }
+    .bottom-page-scrolls{
+        padding: 5vw 7vw;
+    }
+}

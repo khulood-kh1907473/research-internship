@@ -11,7 +11,7 @@ main #role{
 }
 
 main > #role > select{
-    width: 50vh;
+    width: 60vh;
     padding: 12px;
     margin: 10px 0px 5px 0px;
     cursor: pointer;
@@ -64,4 +64,11 @@ main > #student > input {
 
 #submit{
     display: none;
+}
+
+@media (max-width: 705px) {
+    main #role{
+        display: flex;
+        flex-direction: column;
+    }
 }
