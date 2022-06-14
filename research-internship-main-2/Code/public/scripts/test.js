@@ -1,6 +1,7 @@
 import {updateStudentTest} from "../repositories/StudentRepository.js"
 
 let results;
+const buttonClicked = new Audio("media/buttonClicked.mp3");
 
 document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementsByClassName(" questionsResult");
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function changedButton(){
+    
     if (document.getElementById("start").innerHTML == "Submit") {
         await submitFunction();
     }
@@ -20,32 +22,34 @@ async function changedButton(){
 }
 
 async function submitFunction(){
+    buttonClicked.play();
     const message = document.querySelector("#window-message");
     document.querySelector("#popup").style.opacity = "0.9";
     message.innerHTML = "Your score is: " + await showScore() + "/7. Your response was submitted. Thank you for your time";
     window.setTimeout(async() => {
         window.location.href = "../login.html";
-    },3000);
+    },9000);
+    
 }
 
-function feedBack () {
-    document.getElementById("boxBack").classList.remove("show");
-    document.getElementById("timeLeft").innerHTML = "Score: " + showScore() + " / 7";
-    for (let i=0; i<results.length+1; i++){
-        results[i].style.display = "block";
-    }
-}
+// function feedBack () {
+//     document.getElementById("boxBack").classList.remove("show");
+//     //document.getElementById("timeLeft").innerHTML = "Score: " + showScore() + " / 7";
+//     for (let i=0; i<results.length+1; i++){
+//         results[i].style.display = "block";
+//     }
+// }
 
 async function showScore()
 {
     let score = 0;
-    let answer1 = document.getElementById("QuestionOneAnswerOne").checked;
+    let answer1 = document.getElementById("QuestionOneAnswerFour").checked;
     let answer2 = document.getElementById("QuestionTwoAnswerFour").checked;
     let answer3 = document.getElementById("QuestionThreeAnswerThree").checked;
-    let answer4 = document.getElementById("QuestionFourAnswerOne").checked;
+    let answer4 = document.getElementById("QuestionFourAnswerTwo").checked;
     let answer5 = document.getElementById("QuestionFiveAnswerOne").checked;
-    let answer6 = document.getElementById("QuestionSixAnswerFour").checked;
-    let answer7 = document.getElementById("QuestionSevenAnswerThree").checked;
+    let answer6 = document.getElementById("QuestionSixAnswerThree").checked;
+    let answer7 = document.getElementById("QuestionSevenAnswerOne").checked;
 
     const correctAnswers = [ answer1, answer2, answer3, answer4, answer5, answer6, answer7 ];
     const values = [];
@@ -61,14 +65,14 @@ async function showScore()
             document.getElementById("question"+(i+1)+"Result").style.color = "red";
         }
     }
+    
     console.log(values);
     const uuid = sessionStorage.getItem("uuid");
     await updateStudentTest(uuid, values);
-
-
     return score;
 }
 
 function start() {
+    buttonClicked.play();
     document.getElementById("form").style.display = "block";
 }

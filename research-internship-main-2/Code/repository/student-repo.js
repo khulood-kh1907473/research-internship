@@ -5,48 +5,50 @@ import fs from "fs-extra";
 
 export default class StudentRepo {
     async initialize() {
-        try {
-            const hostname = "localhost";
-            const port = "27017";
-            const database = "students";
-            const uri = `mongodb://${hostname}:${port}/${database}`;
-           // const deploymenturi = `mongodb+srv://shadowomizi:qaIC1MvsrU4aUCOv@projects.o8ea3.mongodb.net/?retryWrites=true&w=majority`
-
-            mongoose.connect(uri, async function(error) {
-                if (error) {
-                    console.error(error);
-                }
-            });
-
-            await Student.deleteMany();
-            try {
-                const data = await fs.readJSON(`./public/data/students.json`);
-                data.forEach(async (element) => {
-                    await Student.create(element);
-                });
-            } catch (error) {
-                console.log("Error initialising", Student);
-                console.log(error);
-            }
-
-
-            await Users.deleteMany(); //initalize teacher login details
-            try {
-                const data = await fs.readJSON(`./public/data/users.json`);
-                data.forEach(async (element) => {
-                    await Users.create(element);
-                });
-            } catch (error) {
-                console.log("Error initialising", Users);
-                console.log(error);
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
+        // try {
+        //     const hostname = "localhost";
+        //     const port = "27017";
+        //     const database = "students";
+        //    // const uri = `mongodb://${hostname}:${port}/${database}`;
+        //     const deploymenturi = `mongodb+srv://shadowomizi:qaIC1MvsrU4aUCOv@projects.o8ea3.mongodb.net/?retryWrites=true&w=majority`
+        //
+        //     mongoose.connect(deploymenturi, async function(error) {
+        //         if (error) {
+        //             console.error(error);
+        //         }
+        //     });
+        //
+        //     await Student.deleteMany();
+        //     try {
+        //         const data = await fs.readJSON(`./public/data/students.json`);
+        //         data.forEach(async (element) => {
+        //             await Student.create(element);
+        //         });
+        //     } catch (error) {
+        //         console.log("Error initialising", Student);
+        //         console.log(error);
+        //     }
+        //
+        //
+        //     await Users.deleteMany(); //initalize teacher login details
+        //     try {
+        //         const data = await fs.readJSON(`./public/data/users.json`);
+        //         data.forEach(async (element) => {
+        //             await Users.create(element);
+        //         });
+        //     } catch (error) {
+        //         console.log("Error initialising", Users);
+        //         console.log(error);
+        //     }
+        // }
+        // catch (e) {
+        //     console.log(e);
+        // }
     }
 
     async addStudent(student){
+        student.survey = ["0","0","0","0","0","0","0","0","0","0"];
+        student.test = ["-1","-1","-1","-1","-1","-1","-1"];
         const studentObject = await Student.create(student);
         return studentObject._id.toString();
     }

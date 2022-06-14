@@ -2,6 +2,8 @@ import {createStudent} from "../repositories/StudentRepository.js"
 import {readUser} from "../repositories/UserRepository.js";
 
 document.addEventListener("DOMContentLoaded", start);
+const alarm = new Audio("media/alarmSound.mp3");
+const buttonClicked = new Audio("media/buttonClicked.mp3");
 
 async function start(){
     let role = "none";
@@ -20,10 +22,21 @@ async function start(){
             document.querySelector("#teacher").style.display = "flex";
             document.querySelector("#submit").style.display = "block";
         }
-    })
+    });
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye / eye slash icon
+        this.classList.toggle('bi-eye');
+    });
 
     const submit = document.querySelector("#submit");
     submit.addEventListener("click", (event) => {
+        buttonClicked.play();
         event.preventDefault();
         moderatorForm();
     });
@@ -54,6 +67,7 @@ async function moderatorForm(){
             window.location.href = "../survey-statistics.html";
         },3000);
     } else {
+        alarm.play();
         alert("Incorrect email or password!");
     }
 }

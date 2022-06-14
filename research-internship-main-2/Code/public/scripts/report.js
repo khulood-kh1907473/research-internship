@@ -1,10 +1,13 @@
 import {getStudents} from "../repositories/StudentRepository.js";
 
 document.addEventListener("DOMContentLoaded", start);
+const buttonClicked = new Audio("media/buttonClicked.mp3");
+
 
 async function start(){
     const submit = document.querySelector("#submit");
     submit.addEventListener("click", async () => {
+        buttonClicked.play();
         await generateReport();
     })
 }

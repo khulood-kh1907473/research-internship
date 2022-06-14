@@ -32,7 +32,7 @@ main > #role > select{
 
 #teacher{
     margin-top: 100px;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -41,7 +41,10 @@ main > #role > select{
 #teacher > input {
     margin-top: 17px;
     margin-bottom: 17px;
+   
 }
+
+
 
 main > #student > input {
     margin-top: 17px;
@@ -65,6 +68,26 @@ main > #student > input {
 #submit{
     display: none;
 }
+
+
+  
+#teacher  p {
+    position: relative;
+    color: var(--color-light-purple);
+    align-items : center;
+   
+    
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  i {
+      position: absolute;
+      margin-left: -50px;
+      
+  }
+
 
 @media (max-width: 705px) {
     main #role{

@@ -103,8 +103,8 @@ header{
 }
 
 .questionsResult{
-    display: none;
-    color: greenyellow;
+    display: block;
+    color: rgb(47, 158, 255);
 }
 
 .question > div {
