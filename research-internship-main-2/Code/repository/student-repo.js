@@ -47,10 +47,20 @@ export default class StudentRepo {
     }
 
     async addStudent(student){
+        student.progress = "survey";
         student.survey = ["0","0","0","0","0","0","0","0","0","0"];
         student.test = ["-1","-1","-1","-1","-1","-1","-1"];
-        const studentObject = await Student.create(student);
-        return studentObject._id.toString();
+        student.postsurvey = ["0","0","0","0","0","0","0","0","0","0", "blank", "blank"];
+        await Student.create(student);
+    }
+
+    async getStudent(uuid){
+        try{
+            return await Student.findOne({email: uuid}, { _id: 0, __v: 0 });
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     async getStudents(){
@@ -64,7 +74,25 @@ export default class StudentRepo {
 
     async updateStudentSurvey(uuid, answer){
         try{
-            return await Student.findOneAndUpdate({_id: uuid},{survey: answer});
+            return await Student.findOneAndUpdate({email: uuid},{survey: answer});
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    async updateStudentProgress(uuid, progress){
+        try{
+            return await Student.findOneAndUpdate({email: uuid},{progress: progress.progress});
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    async updateStudentPostSurvey(uuid, answer){
+        try{
+            return await Student.findOneAndUpdate({email: uuid},{postsurvey: answer});
         }
         catch (e) {
             console.log(e);
@@ -73,7 +101,7 @@ export default class StudentRepo {
 
     async updateStudentTest(uuid, answer){
         try{
-            return await Student.findOneAndUpdate({_id: uuid},{test: answer});
+            return await Student.findOneAndUpdate({email: uuid},{test: answer});
         }
         catch (e) {
             console.log(e);

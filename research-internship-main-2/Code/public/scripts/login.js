@@ -1,4 +1,4 @@
-import {createStudent} from "../repositories/StudentRepository.js"
+import {createStudent, getStudent} from "../repositories/StudentRepository.js"
 import {readUser} from "../repositories/UserRepository.js";
 
 document.addEventListener("DOMContentLoaded", start);
@@ -12,14 +12,17 @@ async function start(){
     selectForm.addEventListener("change", () => {
         role = selectForm.value;
         if(role === "pre-service teacher" || role === "in-service teacher") {
-            document.querySelector("#role").style.height = "100vh";
+            document.querySelector("#role").style.height = "20vh";
             document.querySelector("#teacher").style.display = "none";
+            document.querySelector("#student").style.display = "flex";
             document.querySelector("#submit").style.display = "none";
-            studentForm(role);
+            document.querySelector("#student-buttons").style.display = "flex";
         }
         else {
             document.querySelector("#role").style.height = "20vh";
+            document.querySelector("#student").style.display = "none";
             document.querySelector("#teacher").style.display = "flex";
+            document.querySelector("#student-buttons").style.display = "none";
             document.querySelector("#submit").style.display = "block";
         }
     });
@@ -38,22 +41,88 @@ async function start(){
     submit.addEventListener("click", (event) => {
         buttonClicked.play();
         event.preventDefault();
-        moderatorForm();
+        if(role==="moderator")
+            moderatorForm();
     });
+
+    const startnew = document.querySelector("#make-new");
+    startnew.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(document.querySelector("#email").value === "") {
+            document.querySelector("#email").style.border = "2px solid red";
+            alert("please enter an email");
+        }
+        else
+            studentForm(role, null);
+    });
+
+    const cont = document.querySelector("#continue");
+    cont.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(document.querySelector("#email").value === "") {
+            document.querySelector("#email").style.border = "2px solid red";
+            alert("please enter an email");
+        }
+        else
+            studentForm(role, "continue");
+    });
+
 };
 
-async function studentForm(role){
+async function studentForm(role, type){
     const values = {};
     values.role = role;
+    values.email = document.querySelector("#email").value;
     const response = await createStudent(values);
-    sessionStorage.setItem("uuid", response);
-         document.querySelector("body").classList.add("fadeout");
-         window.setTimeout(() => {
-             window.location.href = "../survey.html";
-         },3000);
+    sessionStorage.setItem("email", values.email);
+    if(!response){
+        //new email
+        document.querySelector("body").classList.add("fadeout");
+        window.setTimeout(() => {
+            window.location.href = "../survey.html";
+        },3000);
+    }
+    else{
+        //email exists
+        if(type === "continue"){
+           const student = await getStudent(values.email);
+            if(student.progress === "complete"){
+                document.querySelector("#popup").style.color = "springgreen";
+                document.querySelector("#window-symbol").innerHTML = "&#10003;";
+                document.querySelector("#window-message").innerHTML = "Submission complete, please start a new submission";
+                document.querySelector("#popup").style.opacity = "0.9";
+                document.querySelector("#popup").style.zIndex = "0";
+                window.setTimeout(() => {
+                    document.querySelector("#popup").style.opacity = "0";
+                    document.querySelector("#popup").style.zIndex = "-1";
+                },5000);
+                return;
+            }
+           document.querySelector("#popup").style.color = "springgreen";
+            document.querySelector("#window-symbol").innerHTML = "&#10003;";
+            document.querySelector("#window-message").innerHTML = "You will be redirected shortly.";
+            document.querySelector("#popup").style.opacity = "0.9";
+            document.querySelector("#popup").style.zIndex = "0";
+            window.setTimeout(() => {
+                window.location.href = `../${student.progress}.html`;
+            },3000);
+            return;
+        }
+        document.querySelector("#popup").style.color = "red";
+        document.querySelector("#window-symbol").innerHTML = "&#10005;";
+        document.querySelector("#window-message").innerHTML = "Email already exists!";
+        document.querySelector("#popup").style.opacity = "0.9";
+        document.querySelector("#popup").style.zIndex = "0";
+        window.setTimeout(() => {
+            document.querySelector("#popup").style.opacity = "0";
+            document.querySelector("#popup").style.zIndex = "-1";
+        },5000);
+    }
+
 }
 
 async function moderatorForm(){
+    console.log("here");
     const values = {};
     values.username = document.querySelector("#username").value;
     values.password = document.querySelector("#password").value;

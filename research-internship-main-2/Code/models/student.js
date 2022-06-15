@@ -5,6 +5,14 @@ const schema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    progress: {
+        type: String
+    },
     date: {
       type: Date,
       default: Date.now,
@@ -14,6 +22,10 @@ const schema = new mongoose.Schema({
         default: [],
     },
     test: {
+        type: [String],
+        default: [],
+    },
+    postsurvey: {
         type: [String],
         default: [],
     },

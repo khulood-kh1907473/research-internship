@@ -1,4 +1,4 @@
-import {updateStudentSurvey} from "../repositories/StudentRepository.js"
+import {updateStudentSurvey, updateStudentProgress} from "../repositories/StudentRepository.js"
 
 document.addEventListener("DOMContentLoaded", start);
 
@@ -19,9 +19,16 @@ async function start(){
           if(element[j].checked)
               values.push(element[j].value);
      }
+     // const location = window.location.pathname;
+     // const filename = location.substring(location.lastIndexOf('/')+1);
+     // console.log(filename);
      console.log(values);
-     const uuid = sessionStorage.getItem("uuid");
+     const uuid = sessionStorage.getItem("email");
      await updateStudentSurvey(uuid, values);
+     const student = {};
+     student.progress = "test";
+     await updateStudentProgress(uuid, student);
+
      document.querySelector("#popup").style.opacity = "0.9";
      window.setTimeout(() => {
          window.location.href = "../home.html";

@@ -1,3 +1,5 @@
+import {updateStudentProgress} from "../repositories/StudentRepository.js";
+
 let position = 0;
 let toggle = false;
 

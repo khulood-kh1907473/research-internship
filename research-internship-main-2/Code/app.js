@@ -8,12 +8,15 @@ import mongoose from "mongoose";
 const port = process.env.PORT || 3434;
 const app = express();
 
-const duri = `mongodb+srv://shadowomizi:qaIC1MvsrU4aUCOv@projects.o8ea3.mongodb.net/?retryWrites=true&w=majority`;
-let uri = process.env.MONGODB_URI || duri;
-mongoose.connect (uri, async function(error) {
-   if(error){
-      console.log(error);
-   }
+// const duri = `mongodb+srv://shadowomizi:qaIC1MvsrU4aUCOv@projects.o8ea3.mongodb.net/?retryWrites=true&w=majority`;
+// let uri = process.env.MONGODB_URI || duri;
+// mongoose.connect (uri, async function(error) {
+//    if(error){
+//       console.log(error);
+//    }
+// });
+mongoose.connect("mongodb://localhost:27017/students", function(error){
+   console.error(error);
 });
 
 

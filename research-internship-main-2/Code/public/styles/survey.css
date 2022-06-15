@@ -41,14 +41,14 @@ textarea {
     font-family: 'PT Mono', monospace;
     resize: none;
     margin-top: 15px;
-    width: 100%;
+    width: 65%;
     height: 150px;
     padding: 12px;
     box-sizing: border-box;
     border: var(--color-light-purple) solid 2px;
     border-radius: 4px;
     background-color: var(--color-white);
-    font-size: 20px;
+    font-size: 15px;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
 }
 
@@ -120,6 +120,17 @@ form div div div:nth-child(even){
     background-color: var(--color-infant-blue);
     border-radius: 10px;
 }
+
+.response{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.response > label {
+    width: 75%;
+}
+
 
 #popup{
     opacity: 0;
@@ -198,6 +209,13 @@ form div div div:nth-child(even){
     .question > div > input:nth-child(5)::after{
         content: "Strongly Disagree";
         padding-left: 180px;
+    }
+
+    .response > label {
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
     }
 }
 

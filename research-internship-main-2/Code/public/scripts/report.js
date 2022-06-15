@@ -22,11 +22,15 @@ async function generateReport(){
         data.push(flat(element));
     });
     console.log(data);
-    data.unshift(["role",
+    data.unshift(["role","email","progress",
         "survey-question-1", "survey-question-2","survey-question-3","survey-question-4","survey-question-5",
         "survey-question-6","survey-question-7","survey-question-8","survey-question-9","survey-question-10",
         "test-question-1","test-question-2","test-question-3","test-question-4","test-question-5",
-        "test-question-6","test-question-7","date"]);
+        "test-question-6","test-question-7",
+        "postsurvey-question-1", "postsurvey-question-2","postsurvey-question-3","postsurvey-question-4","postsurvey-question-5",
+        "postsurvey-question-6","postsurvey-question-7","postsurvey-question-8","postsurvey-question-9","postsurvey-question-10",
+        "postsurvey-question-11","postsurvey-question-12",
+        "date"]);
     const csvFile = await dataToCSV(data);
     console.log(csvFile);
    await downloadFile(csvFile, 'studentSurvey.csv', 'text/csv;charset=utf-8;')

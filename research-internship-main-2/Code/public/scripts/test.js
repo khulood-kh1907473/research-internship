@@ -1,4 +1,4 @@
-import {updateStudentTest} from "../repositories/StudentRepository.js"
+import {updateStudentProgress, updateStudentTest} from "../repositories/StudentRepository.js"
 
 let results;
 const buttonClicked = new Audio("media/buttonClicked.mp3");
@@ -23,12 +23,16 @@ async function changedButton(){
 
 async function submitFunction(){
     buttonClicked.play();
+    const uuid = sessionStorage.getItem("email");
     const message = document.querySelector("#window-message");
+    const student = {};
+    student.progress = "post-survey";
+    await updateStudentProgress(uuid, student);
     document.querySelector("#popup").style.opacity = "0.9";
     message.innerHTML = "Your score is: " + await showScore() + "/7. Your response was submitted. Thank you for your time";
     window.setTimeout(async() => {
-        window.location.href = "../login.html";
-    },9000);
+        window.location.href = "../post-survey.html";
+    },5000);
     
 }
 
@@ -67,7 +71,7 @@ async function showScore()
     }
     
     console.log(values);
-    const uuid = sessionStorage.getItem("uuid");
+    const uuid = sessionStorage.getItem("email");
     await updateStudentTest(uuid, values);
     return score;
 }

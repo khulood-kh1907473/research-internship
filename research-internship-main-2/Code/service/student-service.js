@@ -13,6 +13,15 @@ export default class StudentService {
         }
     }
 
+    async getStudent(req, res) {
+        try {
+            const response = await studentRepo.getStudent(req.params.uuid);
+            res.json(response);
+        } catch (e) {
+            res.status(500).send(e);
+        }
+    }
+
     async getStudents(req, res) {
         try {
             const response = await studentRepo.getStudents();
@@ -25,6 +34,32 @@ export default class StudentService {
     async updateStudentSurvey(req, res) {
         try {
             const student = await studentRepo.updateStudentSurvey(req.params.uuid, req.body);
+            if(student)
+                res.status(200).json(student);
+            else
+                res.sendStatus(404);
+        }
+        catch(e){
+            res.status(500).send(e);
+        }
+    }
+
+    async updateStudentProgress(req, res) {
+        try {
+            const student = await studentRepo.updateStudentProgress(req.params.uuid, req.body);
+            if(student)
+                res.status(200).json(student);
+            else
+                res.status(404).json({message: "Here"});
+        }
+        catch(e){
+            res.status(500).send(e);
+        }
+    }
+
+    async updateStudentPostSurvey(req, res) {
+        try {
+            const student = await studentRepo.updateStudentPostSurvey(req.params.uuid, req.body);
             if(student)
                 res.status(200).json(student);
             else

@@ -27,6 +27,20 @@ export async function updateStudentSurvey(uuid, values){
     }
 }
 
+export async function updateStudentPostSurvey(uuid, values){
+    try{
+        const student = await fetch(`api/students/${uuid}/postsurvey`, {
+            headers: {"Content-Type": "application/json"},
+            method: "PUT",
+            body: JSON.stringify(values)
+        });
+        return await student.json();
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
 export async function updateStudentTest(uuid, values){
     try{
         const student = await fetch(`api/students/${uuid}/test`, {
@@ -34,6 +48,22 @@ export async function updateStudentTest(uuid, values){
             method: "PUT",
             body: JSON.stringify(values)
         });
+        console.log(JSON.stringify(values));
+        return await student.json();
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+export async function updateStudentProgress(uuid, progress){
+    try{
+        const student = await fetch(`api/students/${uuid}/progress`, {
+            headers: {"Content-Type": "application/json"},
+            method: "PUT",
+            body: JSON.stringify(progress)
+        });
+        console.log(JSON.stringify(progress));
         return await student.json();
     }
     catch(error){
@@ -57,6 +87,16 @@ export async function getStats(){
 export async function getStudents(){
     try{
         const result = await fetch(`/api/students`);
+        return await result.json();
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+export async function getStudent(uuid){
+    try{
+        const result = await fetch(`/api/student/${uuid}`);
         return await result.json();
     }
     catch(error){
