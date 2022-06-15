@@ -48,7 +48,6 @@ export async function updateStudentTest(uuid, values){
             method: "PUT",
             body: JSON.stringify(values)
         });
-        console.log(JSON.stringify(values));
         return await student.json();
     }
     catch(error){
@@ -63,7 +62,6 @@ export async function updateStudentProgress(uuid, progress){
             method: "PUT",
             body: JSON.stringify(progress)
         });
-        console.log(JSON.stringify(progress));
         return await student.json();
     }
     catch(error){

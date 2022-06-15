@@ -19,10 +19,6 @@ async function start(){
           if(element[j].checked)
               values.push(element[j].value);
      }
-     // const location = window.location.pathname;
-     // const filename = location.substring(location.lastIndexOf('/')+1);
-     // console.log(filename);
-     console.log(values);
      const uuid = sessionStorage.getItem("email");
      await updateStudentSurvey(uuid, values);
      const student = {};

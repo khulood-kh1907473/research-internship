@@ -69,8 +69,7 @@ async function showScore()
             document.getElementById("question"+(i+1)+"Result").style.color = "red";
         }
     }
-    
-    console.log(values);
+
     const uuid = sessionStorage.getItem("email");
     await updateStudentTest(uuid, values);
     return score;

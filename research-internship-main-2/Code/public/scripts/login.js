@@ -72,7 +72,22 @@ async function start(){
 async function studentForm(role, type){
     const values = {};
     values.role = role;
-    values.email = document.querySelector("#email").value;
+    const email = document.querySelector("#email").value;
+    if(! (/(.+){2,}@(.+){2,}\.(.+){2,}/.test(email))){
+        document.querySelector("#email").style.border = "2px solid red"
+        document.querySelector("#popup").style.color = "red";
+        document.querySelector("#window-symbol").innerHTML = "&#10005;";
+        document.querySelector("#window-message").innerHTML = "Please enter a valid email!";
+        document.querySelector("#popup").style.opacity = "0.9";
+        document.querySelector("#popup").style.zIndex = "0";
+        window.setTimeout(() => {
+            document.querySelector("#popup").style.opacity = "0";
+            document.querySelector("#popup").style.zIndex = "-1";
+        },1500);
+        return;
+    }
+
+    values.email = email;
     const response = await createStudent(values);
     sessionStorage.setItem("email", values.email);
     if(!response){
@@ -95,7 +110,7 @@ async function studentForm(role, type){
                 window.setTimeout(() => {
                     document.querySelector("#popup").style.opacity = "0";
                     document.querySelector("#popup").style.zIndex = "-1";
-                },5000);
+                },1500);
                 return;
             }
            document.querySelector("#popup").style.color = "springgreen";
@@ -108,6 +123,7 @@ async function studentForm(role, type){
             },3000);
             return;
         }
+        document.querySelector("#email").style.border = "2px solid red";
         document.querySelector("#popup").style.color = "red";
         document.querySelector("#window-symbol").innerHTML = "&#10005;";
         document.querySelector("#window-message").innerHTML = "Email already exists!";
@@ -116,20 +132,16 @@ async function studentForm(role, type){
         window.setTimeout(() => {
             document.querySelector("#popup").style.opacity = "0";
             document.querySelector("#popup").style.zIndex = "-1";
-        },5000);
+        },1500);
     }
 
 }
 
 async function moderatorForm(){
-    console.log("here");
     const values = {};
     values.username = document.querySelector("#username").value;
     values.password = document.querySelector("#password").value;
-    console.log(values.username);
-    console.log(values.password);
     const user = await readUser(values.username, values.password);
-    console.log(user);
     if (user.exists) {
         document.querySelector("body").classList.add("fadeout");
         window.setTimeout(() => {

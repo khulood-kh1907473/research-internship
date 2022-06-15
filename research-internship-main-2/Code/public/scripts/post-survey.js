@@ -22,11 +22,8 @@ async function getFormValues() {
 
     for(let i=11; i<13; i++){
         const answer = document.querySelector(`#question-${i}`);
-        console.log(answer.value);
         values.push(answer.value);
     }
-
-    console.log(values);
     const uuid = sessionStorage.getItem("email");
     await updateStudentPostSurvey(uuid, values);
     const student = {};

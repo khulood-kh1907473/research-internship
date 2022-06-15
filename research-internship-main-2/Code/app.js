@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from "cors";
 import router from './router.js';
 import mongoose from "mongoose";
+import Student from "./models/student.js";
 
 
 const port = process.env.PORT || 3434;

@@ -14,14 +14,12 @@ async function start(){
 
 async function generateReport(){
     const students = await getStudents();
-    console.log(students);
 
     const data = [];
     const flat = (obj) => Object.values(obj).flat();
     students.forEach((element) => {
         data.push(flat(element));
     });
-    console.log(data);
     data.unshift(["role","email","progress",
         "survey-question-1", "survey-question-2","survey-question-3","survey-question-4","survey-question-5",
         "survey-question-6","survey-question-7","survey-question-8","survey-question-9","survey-question-10",
@@ -32,7 +30,6 @@ async function generateReport(){
         "postsurvey-question-11","postsurvey-question-12",
         "date"]);
     const csvFile = await dataToCSV(data);
-    console.log(csvFile);
    await downloadFile(csvFile, 'studentSurvey.csv', 'text/csv;charset=utf-8;')
  }
 

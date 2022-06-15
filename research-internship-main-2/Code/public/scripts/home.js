@@ -77,9 +77,6 @@ function content(actual, previous){
     if(actual === previous)
         return;
 
-    console.log(previous);
-    console.log(actual);
-
     if(actual > previous) {
         for (let i = previous; i < actual; i++) {
             circles[i].classList.add("active");
@@ -123,7 +120,6 @@ function selectItem(index){
 }
 
 async function toggleSolution(toggleInstance, toggleButton, location){
-    console.log(toggleInstance);
     if(document.querySelector(`#solution-${location}`).style.opacity === "1"){
         toggleButton.innerHTML = "--&#8609;--";
         const element = document.querySelector(`#solution-${location}`);
