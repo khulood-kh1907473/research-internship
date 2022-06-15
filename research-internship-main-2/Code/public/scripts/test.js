@@ -29,10 +29,10 @@ async function submitFunction(){
     student.progress = "post-survey";
     await updateStudentProgress(uuid, student);
     document.querySelector("#popup").style.opacity = "0.9";
-    message.innerHTML = "Your score is: " + await showScore() + "/7. Your response was submitted. Thank you for your time";
+    message.innerHTML = "Your score is: " + await showScore() + "/7. Your response was submitted. You will be redirected shortly";
     window.setTimeout(async() => {
         window.location.href = "../post-survey.html";
-    },5000);
+    },3000);
     
 }
 
