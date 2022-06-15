@@ -27,7 +27,7 @@ async function generateReport(){
         "test-question-6","test-question-7",
         "postsurvey-question-1", "postsurvey-question-2","postsurvey-question-3","postsurvey-question-4","postsurvey-question-5",
         "postsurvey-question-6","postsurvey-question-7","postsurvey-question-8","postsurvey-question-9","postsurvey-question-10",
-        "postsurvey-question-11","postsurvey-question-12",
+        "postsurvey-question-11","postsurvey-question-12","postsurvey-question-13","postsurvey-question-14",
         "date"]);
     const csvFile = await dataToCSV(data);
    await downloadFile(csvFile, 'studentSurvey.csv', 'text/csv;charset=utf-8;')

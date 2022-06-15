@@ -179,7 +179,7 @@ form div div div:nth-child(even){
         flex-direction: column;
     }
     .question > div{
-        width: 500px;
+        width: 200px;
     }
 
     .question > label{
