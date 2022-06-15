@@ -20,7 +20,7 @@ async function getFormValues() {
                 values.push(element[j].value);
     }
 
-    for(let i=11; i<13; i++){
+    for(let i=11; i<15; i++){
         const answer = document.querySelector(`#question-${i}`);
         values.push(answer.value);
     }

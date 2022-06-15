@@ -50,7 +50,7 @@ export default class StudentRepo {
         student.progress = "survey";
         student.survey = ["0","0","0","0","0","0","0","0","0","0"];
         student.test = ["-1","-1","-1","-1","-1","-1","-1"];
-        student.postsurvey = ["0","0","0","0","0","0","0","0","0","0", "blank", "blank"];
+        student.postsurvey = ["0","0","0","0","0","0","0","0","0","0","blank","blank","blank","blank"];
         await Student.create(student);
     }
 
