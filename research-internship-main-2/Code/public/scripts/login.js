@@ -48,6 +48,7 @@ async function start(){
     const startnew = document.querySelector("#make-new");
     startnew.addEventListener("click", (e) => {
         e.preventDefault();
+        buttonClicked.play();
         if(document.querySelector("#email").value === "") {
             document.querySelector("#email").style.border = "2px solid red";
             alert("please enter an email");
@@ -59,6 +60,7 @@ async function start(){
     const cont = document.querySelector("#continue");
     cont.addEventListener("click", (e) => {
         e.preventDefault();
+        buttonClicked.play();
         if(document.querySelector("#email").value === "") {
             document.querySelector("#email").style.border = "2px solid red";
             alert("please enter an email");
@@ -73,7 +75,7 @@ async function studentForm(role, type){
     const values = {};
     values.role = role;
     const email = document.querySelector("#email").value;
-    if(! (/(.+){2,}@(.+){2,}\.(.+){2,}/.test(email))){
+    if(! (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email))){
         document.querySelector("#email").style.border = "2px solid red"
         document.querySelector("#popup").style.color = "red";
         document.querySelector("#window-symbol").innerHTML = "&#10005;";
@@ -143,6 +145,7 @@ async function moderatorForm(){
     values.password = document.querySelector("#password").value;
     const user = await readUser(values.username, values.password);
     if (user.exists) {
+        buttonClicked.play();
         document.querySelector("body").classList.add("fadeout");
         window.setTimeout(() => {
             window.location.href = "../survey-statistics.html";

@@ -62,6 +62,7 @@ async function start(){
      position = position - 1;
      if(position < 1)
          position = 1;
+     document.querySelector("#popup").style.opacity = "0";
      content(position, position+1);
  }
 
@@ -70,6 +71,19 @@ function nextFunction(){
     if(position > 16){
         position = 16;
     }
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
+    const message = document.querySelector("#window-message");
+    if (position==16){
+        document.querySelector("#popup").style.opacity = "0.9";
+        message.innerHTML = " Are you ready for the test? ";
+        yesButton.addEventListener("click", (event) => {
+            window.location.href = "test.html";
+        });
+    }
+    noButton.addEventListener("click", (event) => {
+        document.querySelector("#popup").style.opacity = "0";
+    });
     content(position, position-1);
 }
 
